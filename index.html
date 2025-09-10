@@ -3,64 +3,412 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lindokuhle Langa| Portfolio</title>
+  <title>Lindokuhle Langa | Portfolio</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
+    :root {
+      /* Dark Theme Variables */
+      --bg-primary: #0f0f0f;
+      --bg-secondary: #1a1a1a;
+      --bg-tertiary: #252525;
+      --text-primary: #e8e8e8;
+      --text-secondary: #b0b0b0;
+      --accent-primary: #d4af37;
+      --accent-secondary: #f4c430;
+      --border-color: #333333;
+      --shadow: rgba(0, 0, 0, 0.5);
+      --card-bg: #1e1e1e;
+    }
+
+    [data-theme="light"] {
+      /* Light Theme Variables */
+      --bg-primary: #f5f3f0;
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #ede7e0;
+      --text-primary: #3c3530;
+      --text-secondary: #5a4f45;
+      --accent-primary: #8b7355;
+      --accent-secondary: #a08968;
+      --border-color: rgba(139, 115, 85, 0.2);
+      --shadow: rgba(107, 91, 71, 0.15);
+      --card-bg: #ffffff;
+    }
+
     body {
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      transition: all 0.3s ease;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent-primary);
+      color: var(--bg-primary);
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px var(--shadow);
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--shadow);
+      background: var(--accent-secondary);
+    }
+
+    /* Header */
     header {
-      background-color: #10132e;
-      color: #fff;
-      padding: 2rem 0;
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+      color: var(--text-primary);
+      padding: 4rem 2rem;
       text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-color);
     }
+
     header h1 {
-      font-size: 2.5rem;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+      text-shadow: 0 2px 4px var(--shadow);
     }
+
     header p {
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 0.5px;
     }
+
+    /* Navigation */
     nav {
-      background-color: #112240;
+      background: var(--bg-secondary);
+      backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
+      gap: 3rem;
+      padding: 1.2rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px var(--shadow);
+      border-bottom: 1px solid var(--border-color);
     }
+
     nav a {
-      color: #64ffda;
+      color: var(--accent-primary);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+      letter-spacing: 0.5px;
     }
+
+    nav a:hover {
+      background: var(--bg-tertiary);
+      transform: translateY(-2px);
+      color: var(--accent-secondary);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--accent-primary);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover::after {
+      width: 80%;
+    }
+
+    /* Sections */
     section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: var(--text-primary);
+      font-weight: 600;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    #about p {
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* Projects */
     .project {
-      background: #fff;
+      background: var(--card-bg);
       margin-bottom: 2rem;
-      padding: 1.5rem;
-      border-left: 5px solid #64ffda;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 2rem;
+      border-radius: 15px;
+      border-left: 5px solid var(--accent-primary);
+      box-shadow: 0 8px 30px var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
     }
+
+    .project::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px var(--shadow);
+    }
+
+    .project:hover::before {
+      transform: scaleX(1);
+    }
+
+    .project h3 {
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .project p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* Skills Section */
+    #skills {
+      text-align: center;
+      background: var(--bg-tertiary);
+      border-radius: 20px;
+      margin: 2rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding: 2rem;
+    }
+
+    .skills-grid img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      padding: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 15px var(--shadow);
+    }
+
+    .skills-grid img:hover {
+      transform: scale(1.15) rotate(5deg);
+      box-shadow: 0 8px 25px var(--shadow);
+      border-color: var(--accent-primary);
+    }
+
+    .toggle-button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background: var(--accent-primary);
+      border: none;
+      color: var(--bg-primary);
+      cursor: pointer;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px var(--shadow);
+    }
+
+    .toggle-button:hover {
+      background: var(--accent-secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--shadow);
+    }
+
+    /* Certifications */
+    #certifications {
+      background: var(--bg-secondary);
+      border-radius: 20px;
+      margin: 2rem;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 30px var(--shadow);
+    }
+
+    /* Contact */
+    #contact {
+      background: var(--bg-tertiary);
+      border-radius: 20px;
+      margin: 2rem;
+      border: 1px solid var(--border-color);
+    }
+
+    #contact p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+    }
+
+    #contact a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    #contact a:hover {
+      color: var(--accent-secondary);
+      text-decoration: underline;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 2rem;
-      background-color: #0a192f;
-      color: #64ffda;
+      padding: 3rem 2rem;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      margin-top: 4rem;
+      border-top: 1px solid var(--border-color);
     }
+
+    footer p {
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .theme-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      nav {
+        gap: 1.5rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      section {
+        padding: 3rem 1rem;
+        margin: 1rem;
+      }
+
+      .skills-grid {
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .skills-grid img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    /* Smooth transitions for theme switching */
+    * {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Loading animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .project {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .project:nth-child(2) { animation-delay: 0.1s; }
+    .project:nth-child(3) { animation-delay: 0.2s; }
+    .project:nth-child(4) { animation-delay: 0.3s; }
+    .project:nth-child(5) { animation-delay: 0.4s; }
+    .project:nth-child(6) { animation-delay: 0.5s; }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
 
   <header>
     <h1>Lindokuhle Langa</h1>
@@ -70,12 +418,14 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a final-year BEngTech Computer Engineering student focused on building real-world solutions in AI, cloud, and embedded systems. With projects ranging from autonomous drones to smart energy systems, I enjoy turning innovation into impact.</p>
+    <p>I'm a final-year BEngTech Computer Engineering student focused on building real-world solutions in AI, cloud, and embedded systems. With projects ranging from autonomous drones to smart energy systems, I enjoy turning innovation into impact.</p>
   </section>
 
   <section id="projects">
@@ -83,31 +433,112 @@
 
     <div class="project">
       <h3>Autonomous Drone Navigation System</h3>
-      <p>AI-powered drone with obstacle avoidance, GPS waypoints, and AWS cloud telemetry.</p>
+      <p>AI-powered drone with obstacle avoidance, GPS waypoints, and AWS cloud telemetry. Features real-time data processing and machine learning algorithms for intelligent flight path optimization.</p>
     </div>
 
     <div class="project">
       <h3>Smart Washing Machine Controller</h3>
-      <p>Solar-powered embedded system with cycle optimization and energy monitoring.</p>
+      <p>Solar-powered embedded system with cycle optimization and energy monitoring. Implements IoT connectivity and predictive maintenance algorithms for enhanced efficiency.</p>
     </div>
 
     <div class="project">
       <h3>AI Fraud Detection Prototype</h3>
-      <p>Python-based ML system trained on financial datasets for real-time anomaly detection.</p>
+      <p>Python-based ML system trained on financial datasets for real-time anomaly detection. Utilizes advanced neural networks and statistical analysis for accurate fraud identification.</p>
     </div>
 
+    <div class="project">
+      <h3>FM Transmitter and Receiver</h3>
+      <p>Custom-built RF communication system with digital signal processing capabilities. Features frequency modulation, signal amplification, and noise reduction for clear audio transmission.</p>
+    </div>
+
+    <div class="project">
+      <h3>WebGL Flappy Bird Game</h3>
+      <p>Browser-based 3D game built with WebGL and JavaScript. Implements physics engine, collision detection, and dynamic rendering for smooth gameplay experience.</p>
+    </div>
+
+    <div class="project">
+      <h3>First Year Engineering Project</h3>
+      <p>Foundational engineering project demonstrating core principles of electronics, programming, and system design. Showcases problem-solving skills and technical documentation.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Programming Languages & Tools</h2>
+    <button class="toggle-button" onclick="toggleSkills()">Toggle Skills</button>
+    <div class="skills-grid" id="skillsGrid">
+      <img src="PYTHON.png" alt="Python" title="Python">
+      <img src="C++.png" alt="C++" title="C++">
+      <img src="JS.png" alt="JavaScript" title="JavaScript">
+      <img src="HTML5.png" alt="HTML5" title="HTML5">
+      <img src="CSS.png" alt="CSS" title="CSS">
+      <img src="JAVA.png" alt="Java" title="Java">
+      <img src="MYSQL.png" alt="MySQL" title="MySQL">
+      <img src="images/git.png" alt="Git" title="Git">
+      <img src="images/aws.png" alt="AWS" title="AWS">
+      <img src="DOCKER.png" alt="Docker" title="Docker">
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications & Skills</h2>
+    <p>Professional certifications and technical expertise in cloud computing, AI/ML, and embedded systems development.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact: 0734350870</h2>
-    <p>Email: 222038152@mycput.ac.za</p>
-    <p>LinkedIn: <a href="www.linkedin.com/in/lindokuhle-langa-6b65a6280" target="_blank">Lindokuhle-Langa</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">lindokuhlelanga</a></p>
+    <h2>Get In Touch</h2>
+    <p><strong>Phone:</strong> 0734350870</p>
+    <p><strong>Email:</strong> <a href="mailto:222038152@mycput.ac.za">222038152@mycput.ac.za</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lindokuhle-langa-6b65a6280" target="_blank">Lindokuhle Langa</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/lindokuhlelanga" target="_blank">lindokuhlelanga</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Lindokuhle. Built with HTML & CSS.</p>
+    <p>&copy; 2025 Lindokuhle Langa. Crafted with passion using HTML, CSS & JavaScript.</p>
   </footer>
 
+  <script>
+    function toggleSkills() {
+      const grid = document.getElementById('skillsGrid');
+      grid.style.display = (grid.style.display === 'none' || grid.style.display === '') ? 'flex' : 'none';
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const themeToggle = document.querySelector('.theme-toggle');
+      
+      if (body.hasAttribute('data-theme')) {
+        body.removeAttribute('data-theme');
+        themeToggle.innerHTML = '🌙 Dark';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.setAttribute('data-theme', 'light');
+        themeToggle.innerHTML = '☀️ Light';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Load saved theme on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      const themeToggle = document.querySelector('.theme-toggle');
+      
+      if (savedTheme === 'light') {
+        document.body.setAttribute('data-theme', 'light');
+        themeToggle.innerHTML = '☀️ Light';
+      } else {
+        themeToggle.innerHTML = '🌙 Dark';
+      }
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
