@@ -1026,12 +1026,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      object-fit: cover;
     }
 
     .project-detail-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .project-detail-image .project-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
     }
 
     .project-detail-image i {
@@ -1218,17 +1226,27 @@
       cursor: pointer;
       transition: all 0.3s ease;
       border: 1px solid var(--border-color);
+      position: relative;
     }
 
     .gallery-item:hover {
-      transform: scale(1.05);
+      transform: scale(2.5);
+      transform-origin: center;
       box-shadow: 0 10px 30px var(--shadow);
+      z-index: 10;
+      overflow: visible;
+      
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.2);
     }
 
     .gallery-item i {
