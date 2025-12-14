@@ -733,12 +733,16 @@
 
             <h2>Key Features</h2>
             <ul>
-              <li>YOLO (You Only Look Once) object detection algorithm achieving 80%+ accuracy for real-time obstacle identification and avoidance</li>
-              <li>Multi-threaded architecture enabling parallel processing of multiple video streams and sensor data inputs simultaneously</li>
-              <li>Real-time data pipeline processing GPS coordinates, telemetry data, and visual input with sub-100ms latency</li>
-              <li>Modular software design following SOLID principles for maintainability and scalability</li>
-              <li>Autonomous waypoint navigation with dynamic path planning and obstacle avoidance</li>
-              <li>Comprehensive error handling and fail-safe mechanisms for reliable operation</li>
+              <li><strong>AI-Powered Detection:</strong> YOLOv8 object detection algorithm achieving 80%+ accuracy for real-time person identification</li>
+              <li><strong>Multi-threaded Architecture:</strong> Parallel processing of video streams (60+ FPS), flight control commands, and GUI updates with thread-safe queues</li>
+              <li><strong>Hardware Integration:</strong> Arduino microcontroller with LED feedback system communicating via PySerial at 9600 baud</li>
+              <li><strong>Telegram Alert System:</strong> Automated notifications with timestamped images sent to mobile devices using Telegram Bot API</li>
+              <li><strong>Professional GUI:</strong> PyQt5-based interface with glassmorphism design, animated buttons, status indicators, and real-time video display</li>
+              <li><strong>Autonomous Navigation:</strong> Customizable patrol patterns (square, front-back) with configurable distance parameters</li>
+              <li><strong>Dual Video Sources:</strong> Support for drone camera and IP webcam with seamless switching</li>
+              <li><strong>Real-time Data Processing:</strong> Sub-100ms latency for detection, processing, and hardware response</li>
+              <li><strong>Battery Management:</strong> Real-time battery monitoring with visual indicators and low-battery warnings</li>
+              <li><strong>Emergency Controls:</strong> Fail-safe mechanisms including emergency landing and system shutdown procedures</li>
             </ul>
 
             <h2>Technical Implementation</h2>
@@ -748,6 +752,36 @@
               managing motor control and flight dynamics. Python was chosen for rapid development and integration 
               with machine learning libraries, while C++ handled performance-critical operations.
             </p>
+            <h2>Hardware-Software Integration</h2>
+              <p>
+                The project demonstrates full-stack IoT development with seamless hardware-software integration:
+              </p>
+              <ul>
+                <li><strong>Arduino Microcontroller:</strong> Custom C++ firmware for LED alert system with serial communication protocol (9600 baud)</li>
+                <li><strong>PySerial Communication:</strong> Bidirectional data exchange between Python application and Arduino for real-time hardware control</li>
+                <li><strong>DJI Tello Drone:</strong> Integration via djitellopy SDK for flight control, telemetry data retrieval, and video streaming</li>
+                <li><strong>Dual Video Sources:</strong> Support for both drone camera and IP webcam (phone) with automatic source switching</li>
+                <li><strong>Telegram Bot Integration:</strong> Real-time alert system with image uploads using Telegram API for remote monitoring</li>
+                <li><strong>LED Indicator System:</strong> Visual feedback mechanism controlled by Arduino responding to detection events</li>
+              </ul>
+
+              <h2>Software Architecture</h2>
+              <ul>
+                <li><strong>Multi-threaded Design:</strong> Separate threads for video processing, GUI updates, autonomous patrol, and sensor monitoring preventing blocking operations</li>
+                <li><strong>PyQt5 Framework:</strong> Professional desktop application with glassmorphism UI, animated widgets, and real-time status indicators</li>
+                <li><strong>Event-Driven Architecture:</strong> Signal-slot mechanism for thread-safe communication between video processing and GUI rendering</li>
+                <li><strong>State Machine Pattern:</strong> Robust state management for different operational modes (preview, phone mode, drone patrol)</li>
+                <li><strong>Error Handling:</strong> Comprehensive try-catch blocks with graceful degradation and user feedback mechanisms</li>
+              </ul>
+
+              <h2>Communication Protocols</h2>
+              <ul>
+                <li><strong>Serial Communication:</strong> UART protocol at 9600 baud for Arduino control with command parsing ("ON", "OFF", "TEST", "B")</li>
+                <li><strong>WiFi Streaming:</strong> UDP video stream from Tello drone at 720p resolution with H.264 encoding</li>
+                <li><strong>HTTP API:</strong> IP webcam integration via HTTP video stream (MJPEG format)</li>
+                <li><strong>Telegram API:</strong> HTTPS POST requests for message and photo uploads with multipart/form-data encoding</li>
+                <li><strong>Inter-thread Communication:</strong> PyQt signals/slots for thread-safe data transfer between processing and UI threads</li>
+              </ul>
 
             <h2>Challenges & Solutions</h2>
             <ul>
@@ -768,22 +802,50 @@
 
           <div class="detail-sidebar">
             <div class="detail-card">
-              <h3><i class="fas fa-code"></i> Tech Stack</h3>
-              <div class="tech-stack-list">
-                <div class="tech-stack-item">
-                  <i class="fab fa-python"></i>
-                  <span>Python</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fas fa-brain"></i>
-                  <span>YOLO (Darknet)</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fas fa-video"></i>
-                  <span>OpenCV</span>
-                </div>
-              </div>
+            <h3><i class="fas fa-code"></i> Tech Stack</h3>
+           <div class="tech-stack-list">
+            <div class="tech-stack-item">
+            <i class="fab fa-python"></i>
+            <span>Python 3.x</span>
             </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-brain"></i>
+              <span>YOLOv8 (Ultralytics)</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-video"></i>
+              <span>OpenCV</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-window-maximize"></i>
+              <span>PyQt5 GUI</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-helicopter"></i>
+              <span>DJITelloPy SDK</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-microchip"></i>
+              <span>Arduino (C++)</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-plug"></i>
+              <span>PySerial</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fab fa-telegram"></i>
+              <span>Telegram Bot API</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-mobile-alt"></i>
+              <span>IP Webcam</span>
+            </div>
+            <div class="tech-stack-item">
+              <i class="fas fa-tasks"></i>
+              <span>Multi-threading</span>
+            </div>
+  </div>
+</div>
 
             <div class="detail-card">
               <h3><i class="fas fa-link"></i> Project Links</h3>
@@ -800,6 +862,9 @@
             <div class="detail-card">
               <h3><i class="fas fa-trophy"></i> Achievements</h3>
               <ul style="list-style: none; padding: 0;">
+                <div class="detail-card">
+              <h3><i class="fas fa-trophy"></i> Achievements</h3>
+              <ul style="list-style: none; padding: 0;">
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
                   <strong>80%+</strong> Detection Accuracy
                 </li>
@@ -809,9 +874,17 @@
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
                   <strong>95%+</strong> Obstacle Avoidance
                 </li>
-                <li style="padding: 0.7rem 0;">
-                  <strong>Excellent</strong> Faculty Feedback
+                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
+                  <strong>Sub-100ms</strong> Response Latency
                 </li>
+                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
+                  <strong>Multi-component</strong> IoT Integration
+                </li>
+                <li style="padding: 0.7rem 0;">
+                  <strong>Production-Ready</strong> System Design
+                </li>
+              </ul>
+</div>
               </ul>
             </div>
           </div>
