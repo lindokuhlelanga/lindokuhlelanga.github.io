@@ -349,6 +349,34 @@
                 </div>
              </div>
           </div>
+
+          <!--Project 7: Network Traffic Optimization-->
+          <div class="project" data-category="networking" data-project="network-optimization">
+            <div class="project-image">
+              <img src="images/NetworkOptimization.png">
+              <span class="project-category">Networking</span>
+            </div>
+            <div class="project-content">
+              <h3>Network Traffic Engineering & Optimization</h3>
+              <p>
+                Advanced traffic engineering using graph theory and linear programming on GEANT2 topology. Implemented Min-Cost Flow, Min-Max Utilization, and Multi-Commodity Flow models achieving 14% max utilization across 32 nodes and 54 links with optimal load balancing.
+              </p>
+              <div class="tech-tag">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NetworkX</span>
+                <span class="tech-tag">Linear Programming</span>
+                <span class="tech-tag">Graph Theory</span>
+                <span class="tech-tag">PuLP</span>
+                <span class="tech-tag">Matplotlib</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" onclick="viewProject('network-optimization'); return false;">
+                  <i class="fas fa-eye"></i>View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -1559,6 +1587,233 @@
       </div>
     </div>
 
+        <!-- PROJECT 6: Network Traffic Optimization -->
+    <div id="projectNetworkOptimization" class="page-view">
+      <div class="project-detail">
+        <div class="project-detail-header">
+          <h1>Network Traffic Engineering & Optimization</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
+            Advanced Optimization using Graph Theory and Linear Programming on GEANT2 Topology
+          </p>
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <span>September - November 2025</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <span>Networking, Optimization</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Network Systems 3 (NSS370S)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-detail-image">
+          <img src="images/GEANT2Topology.png" alt="GEANT2 Network Topology">
+        </div>
+
+        <div class="project-detail-content">
+          <div class="detail-main">
+            <h2>Project Overview</h2>
+            <p>
+              Developed a comprehensive network traffic engineering solution using mathematical optimization techniques 
+              on the GEANT2 topology - a real-world European research and education network with 32 nodes (major cities) 
+              and 54 bidirectional links. The project demonstrates mastery of graph theory, linear programming, and 
+              network optimization algorithms to achieve efficient traffic routing while minimizing congestion and cost.
+            </p>
+
+            <h2>Key Features</h2>
+            <ul>
+              <li><strong>Multi-Model Optimization:</strong> Implemented three distinct optimization approaches - Min-Cost Flow (cost minimization), Min-Max Utilization (load balancing), and Multi-Commodity Flow (simultaneous multi-flow routing)</li>
+              <li><strong>Dijkstra's Algorithm:</strong> Computed shortest paths with O((V+E)logV) complexity for efficient route discovery between Zagreb (node 21) and Barcelona (node 25)</li>
+              <li><strong>Linear Programming Formulation:</strong> Developed complete mathematical models with flow conservation constraints, capacity limits, and non-negativity conditions</li>
+              <li><strong>Single-Commodity Flow (SCF):</strong> Optimized 250 Mbps traffic flow achieving 10% maximum utilization on shortest path (cost = 4,000)</li>
+              <li><strong>Multi-Commodity Flow (MCF):</strong> Simultaneously routed 5 traffic demands totaling 1,000 Mbps (100, 150, 200, 250, 300 Mbps) with 14% maximum utilization</li>
+              <li><strong>Load Balancing:</strong> Min-Max model distributed traffic across 26 links achieving 0.83% maximum utilization for network resilience</li>
+              <li><strong>Statistical Analysis:</strong> Comprehensive performance metrics including mean utilization (4.57%), standard deviation (4.06%), and bottleneck identification</li>
+              <li><strong>Network Visualization:</strong> Created detailed topology diagrams, shortest path visualizations, and utilization heatmaps using NetworkX and Matplotlib</li>
+            </ul>
+
+            <h2>Mathematical Framework</h2>
+            <p>
+              The project applies rigorous mathematical formulations to network optimization problems. The core framework 
+              models the network as a directed graph G=(V,E) where V represents nodes (cities/routers) and E represents 
+              links with associated capacities and weights. Each optimization model solves a constrained linear program:
+            </p>
+            <ul>
+              <li><strong>Decision Variables:</strong> f_ij^k representing flow of commodity k on link (i,j)</li>
+              <li><strong>Objective Functions:</strong> Minimize total cost Σc_ij·f_ij or minimize maximum utilization α</li>
+              <li><strong>Flow Conservation:</strong> Ensures data in equals data out at each intermediate node (Kirchhoff's law analogy)</li>
+              <li><strong>Capacity Constraints:</strong> Total flow on each link cannot exceed its capacity (Σf_ij^k ≤ c_ij)</li>
+              <li><strong>Non-negativity:</strong> All flow variables must be positive (f_ij^k ≥ 0)</li>
+            </ul>
+
+            <h2>Technical Implementation</h2>
+            <p>
+              The solution architecture leverages Python's scientific computing ecosystem. NetworkX library provides 
+              graph data structures and built-in algorithms including Dijkstra's shortest path. PuLP linear programming 
+              library formulates and solves optimization problems with CBC solver backend. The implementation includes 
+              automated demand generation based on student number, topology creation with 32 nodes and 54 edges, and 
+              comprehensive result visualization using Matplotlib.
+            </p>
+
+            <h2>Algorithm Details</h2>
+            <ul>
+              <li><strong>Dijkstra's Shortest Path:</strong> Priority queue-based algorithm computing minimum-cost paths with O((V+E)logV) time complexity</li>
+              <li><strong>Min-Cost Flow:</strong> Linear program minimizing Σw_ij·f_ij subject to flow conservation and capacity constraints</li>
+              <li><strong>Min-Max Utilization:</strong> Minimizes maximum link load (α) ensuring balanced network utilization and resilience</li>
+              <li><strong>Multi-Commodity Flow:</strong> Extends single-flow optimization to K simultaneous demands with shared link capacities</li>
+              <li><strong>Capacity Allocation:</strong> Ring topology with 2,500 Mbps base capacity, cross-links with 10,000 Mbps for long-distance connections</li>
+            </ul>
+
+            <h2>Optimization Results & Analysis</h2>
+            <p>
+              All optimization models achieved optimal solutions without demand scaling (scaling factor = 1.0). The 
+              shortest path from Zagreb to Barcelona was computed as 21→20→26→25 with total cost of 16 and 3 hops. 
+              SCF Min-Cost model achieved lowest total cost (4,000) but concentrated traffic on 3 links with 10% max 
+              utilization. SCF Min-Max model distributed load across 26 links achieving excellent balance (0.83% max 
+              utilization). MCF model successfully routed 5 commodities simultaneously with moderate cost (21,550) and 
+              14% maximum utilization across 14 active links.
+            </p>
+
+            <h2>Statistical Findings</h2>
+            <ul>
+              <li><strong>Network Efficiency:</strong> GEANT2 topology is well-provisioned with maximum utilization only 14% under full load</li>
+              <li><strong>Bottleneck Analysis:</strong> Ljubljana-Bratislava link identified as most utilized (10% in SCF) due to lower capacity (2,500 Mbps)</li>
+              <li><strong>Load Distribution:</strong> Min-Cost shows skewed load (variance 4.33%), Min-Max shows uniform distribution (variance 0.28%)</li>
+              <li><strong>Path Diversity:</strong> GEANT2's ring-and-cross topology provides sufficient redundancy with 54 links for 32 nodes</li>
+              <li><strong>Quartile Analysis:</strong> Median utilization 3.0% (MCF), 2.5% (SCF Min-Cost), 0.83% (SCF Min-Max)</li>
+            </ul>
+
+            <h2>Cost vs. Resilience Trade-off</h2>
+            <p>
+              The project clearly demonstrates the fundamental trade-off in network engineering between cost optimization 
+              and resilience. Min-Cost routing achieves lowest operational cost but creates vulnerability by concentrating 
+              traffic on shortest paths - a single link failure could disrupt entire flows. Min-Max routing ensures robust 
+              operation through balanced load distribution but requires more active links and higher total cost. The MCF 
+              model offers a practical middle ground, achieving reasonable cost while maintaining moderate load distribution 
+              suitable for production networks.
+            </p>
+
+            <h2>Real-World Applications</h2>
+            <ul>
+              <li><strong>OSPF Routing:</strong> Similar to Min-Cost approach using Dijkstra's algorithm for shortest-path routing in enterprise networks</li>
+              <li><strong>MPLS Traffic Engineering:</strong> Comparable to Min-Max approach providing load-balanced, constraint-based routing</li>
+              <li><strong>SDN Controllers:</strong> Modern software-defined networks (Google B4, Microsoft SWAN) use MCF-style optimization for dynamic routing</li>
+              <li><strong>Internet Backbone:</strong> ISPs apply traffic engineering to balance loads across diverse paths and prevent congestion</li>
+            </ul>
+
+            <h2>Results & Impact</h2>
+            <p>
+              Successfully delivered a production-grade network optimization framework demonstrating deep understanding 
+              of graph algorithms, linear programming, and network engineering principles. The project received excellent 
+              academic feedback for mathematical rigor, comprehensive documentation, and practical applicability. All 
+              models achieved optimal convergence confirming correct constraint formulation and solver configuration. 
+              The analysis provides actionable insights for real-world network operators balancing cost, performance, 
+              and resilience requirements.
+            </p>
+          </div>
+
+          <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-code"></i> Tech Stack</h3>
+              <div class="tech-stack-list">
+                <div class="tech-stack-item">
+                  <i class="fab fa-python"></i>
+                  <span>Python 3.x</span>
+                </div>
+                <div class="tech-stack-item">
+                  <i class="fas fa-project-diagram"></i>
+                  <span>NetworkX</span>
+                </div>
+                <div class="tech-stack-item">
+                  <i class="fas fa-calculator"></i>
+                  <span>PuLP (Linear Programming)</span>
+                </div>
+                <div class="tech-stack-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Matplotlib</span>
+                </div>
+                <div class="tech-stack-item">
+                  <i class="fas fa-table"></i>
+                  <span>Pandas</span>
+                </div>
+                <div class="tech-stack-item">
+                  <i class="fas fa-brain"></i>
+                  <span>Dijkstra's Algorithm</span>
+                </div>
+                <div class="tech-stack-item">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Graph Theory</span>
+                </div>
+                <div class="tech-stack-item">
+                  <i class="fas fa-infinity"></i>
+                  <span>Optimization Theory</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h3><i class="fas fa-link"></i> Project Links</h3>
+              <div class="project-actions">
+                <a href="https://github.com/lindokuhlelanga" target="_blank" class="action-btn">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="Lindokuhle_Langa_CV.pdf" download class="action-btn secondary">
+                  <i class="fas fa-file-pdf"></i> Technical Report (PDF)
+                </a>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h3><i class="fas fa-trophy"></i> Key Metrics</h3>
+              <ul style="list-style: none; padding: 0;">
+                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
+                  <strong>32 Nodes</strong> / 54 Links
+                </li>
+                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
+                  <strong>14%</strong> Max Utilization (MCF)
+                </li>
+                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
+                  <strong>5 Commodities</strong> / 1,000 Mbps Total
+                </li>
+                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
+                  <strong>100%</strong> Optimal Solutions
+                </li>
+                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
+                  <strong>3 Models</strong> Implemented
+                </li>
+                <li style="padding: 0.7rem 0;">
+                  <strong>Cost 16</strong> Shortest Path
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-gallery">
+          <h2>Network Visualizations & Results</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/ShortestPath.png" alt="Shortest Path Visualization">
+            </div>
+            <div class="gallery-item">
+              <img src="images/LinkUtilization.png" alt="Link Utilization Graph">
+            </div>
+            <div class="gallery-item">
+              <img src="images/StatisticalAnalysis.png" alt="Statistical Analysis">
+            </div>
+            <div class="gallery-item">
+              <img src="images/FlowDistribution.png" alt="Flow Distribution">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Scroll to Top Button -->
@@ -1704,7 +1959,8 @@
       'sdn': 'projectSDN',
       'database': 'projectDatabase',
       'fm': 'projectFM',
-      'game': 'projectGame'
+      'game': 'projectGame',
+      'network-optimization': 'projectNetworkOptimization'
     };
 
     function viewProject(projectId) {
@@ -1987,3 +2243,14 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
