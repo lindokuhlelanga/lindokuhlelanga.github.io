@@ -220,7 +220,7 @@
           <!-- Flagship: Power Systems -->
           <div class="project" data-category="electrical" data-project="power-systems">
             <div class="project-image">
-              <i class="fas fa-bolt"></i>
+              <img src="images/projects/ieee-six-bus/topology.svg" alt="IEEE Six-Bus DIgSILENT network model from the power systems report">
               <span class="project-category">Power Systems</span>
             </div>
             <div class="project-content">
@@ -295,26 +295,79 @@
             </div>
           </div>
 
-          <!-- Project 3: Database Application -->
-          <div class="project" data-category="web" data-project="database">
+          
+          <!-- Project: Computer & Internetwork Security GA5 -->
+          <div class="project" data-category="security networking" data-project="cis-ga5">
             <div class="project-image">
-              <i class="fas fa-database"></i>
-              <span class="project-category">Full-Stack</span>
+              <img src="images/projects/cis-ga5/packet-tracer-topology.svg" alt="CIS580S GA5 Packet Tracer inter-campus security topology">
+              <span class="project-category">Network Security</span>
             </div>
             <div class="project-content">
-              <h3>Municipal Infrastructure Database</h3>
+              <h3>Computer & Internetwork Security GA5</h3>
               <p>
-                Full-stack database-driven application for municipal infrastructure management with 
-                optimized query performance, ERD modeling, and ACID-compliant transactions.
+                Secured a simulated CPUT Bellville–District Six inter-campus network using an IPsec site-to-site VPN,
+                SSHv2/AAA hardening, management ACLs, brute-force protection and an inline IPS design.
               </p>
               <div class="tech-tags">
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Backend</span>
-                <span class="tech-tag">ERD</span>
+                <span class="tech-tag">Cisco Packet Tracer</span>
+                <span class="tech-tag">IPsec VPN</span>
+                <span class="tech-tag">SSHv2 / AAA</span>
+                <span class="tech-tag">ACLs</span>
               </div>
               <div class="project-links">
-                <a href="#" class="project-link" onclick="viewProject('database'); return false;">
+                <a href="#" class="project-link" onclick="viewProject('cis-ga5'); return false;">
+                  <i class="fas fa-eye"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Next Generation Networks GA5 -->
+          <div class="project" data-category="networking" data-project="ngn-ga5">
+            <div class="project-image">
+              <img src="images/projects/ngn-ga5/architecture.svg" alt="NGN580S GA5 controller-driven MPLS traffic engineering architecture">
+              <span class="project-category">Next Generation Networks</span>
+            </div>
+            <div class="project-content">
+              <h3>NGN580S GA5 — Controller-Driven MPLS-TE</h3>
+              <p>
+                Integrated IOS XRv, OpenDaylight, PCEP, RESTCONF and RSVP-TE in GNS3 to delegate,
+                modify, create and verify controller-managed MPLS traffic-engineered LSPs.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">OpenDaylight</span>
+                <span class="tech-tag">PCEP</span>
+                <span class="tech-tag">RESTCONF</span>
+                <span class="tech-tag">MPLS-TE</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" onclick="viewProject('ngn-ga5'); return false;">
+                  <i class="fas fa-eye"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: NGN Final Summative -->
+          <div class="project" data-category="networking web" data-project="ngn-fsa">
+            <div class="project-image">
+              <img src="images/projects/ngn-fsa/gui.svg" alt="NGN580S traffic engineering application GUI">
+              <span class="project-category">Network Automation</span>
+            </div>
+            <div class="project-content">
+              <h3>NGN580S Final Summative — Traffic Engineering Application</h3>
+              <p>
+                Built a Python/Tkinter application that detects congestion from live telemetry, evaluates candidate
+                paths, performs controller-based MPLS-TE actions and verifies the result on the router.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Tkinter</span>
+                <span class="tech-tag">RESTCONF</span>
+                <span class="tech-tag">PCEP</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" onclick="viewProject('ngn-fsa'); return false;">
                   <i class="fas fa-eye"></i> View Details
                 </a>
               </div>
@@ -1016,161 +1069,211 @@
       </div>
     </div>
 
-    <!-- PROJECT 3: Database Application -->
-    <div id="projectDatabase" class="page-view">
+    
+    <!-- PROJECT: Computer & Internetwork Security GA5 -->
+    <div id="projectCISGA5" class="page-view">
       <div class="project-detail">
         <div class="project-detail-header">
-          <h1>Municipal Infrastructure Database System</h1>
+          <h1>Computer & Internetwork Security GA5</h1>
           <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
-            Full-Stack Database Application with Optimized Query Performance
+            CPUT Inter-Campus Network Security Upgrade — Bellville & District Six
           </p>
           <div class="project-meta">
-            <div class="meta-item">
-              <i class="fas fa-calendar"></i>
-              <span>October 2025</span>
-            </div>
-            <div class="meta-item">
-              <i class="fas fa-tag"></i>
-              <span>Full-Stack, Database</span>
-            </div>
-            <div class="meta-item">
-              <i class="fas fa-graduation-cap"></i>
-              <span>Database Systems 3</span>
-            </div>
+            <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+            <div class="meta-item"><i class="fas fa-shield-halved"></i><span>Network Security</span></div>
+            <div class="meta-item"><i class="fas fa-graduation-cap"></i><span>CIS580S GA5</span></div>
           </div>
         </div>
 
         <div class="project-detail-image">
-          <i class="fas fa-database"></i>
+          <video controls preload="metadata" class="project-video" poster="images/projects/cis-ga5/packet-tracer-topology.svg">
+            <source src="data:video/mp4;base64,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" type="video/mp4">
+          </video>
         </div>
 
         <div class="project-detail-content">
           <div class="detail-main">
             <h2>Project Overview</h2>
             <p>
-              Developed a comprehensive database-driven application for managing municipal infrastructure assets 
-              including roads, water systems, and public facilities. The project demonstrates proficiency in database 
-              design, backend development, and full-stack architecture with emphasis on data integrity and performance optimization.
+              Designed and tested a security upgrade for a simulated CPUT inter-campus network connecting Bellville and
+              District Six. The work addressed inter-campus traffic interception, perimeter-router brute-force attempts and
+              reconnaissance by combining a site-to-site IPsec VPN, router-management hardening, access control and an inline
+              IPS design in Cisco Packet Tracer.
             </p>
 
-            <h2>Key Features</h2>
+            <h2>Security Controls Implemented & Evaluated</h2>
             <ul>
-              <li>Comprehensive Entity-Relationship (ERD) modeling with normalized schema design (3NF) for data integrity</li>
-              <li>MySQL database with optimized indexing strategies reducing query execution time by 60%</li>
-              <li>ACID-compliant transaction management ensuring data consistency across concurrent operations</li>
-              <li>Python backend with SQLAlchemy ORM for efficient database interactions and query building</li>
-              <li>RESTful API design for modular frontend integration and third-party system connectivity</li>
-              <li>Advanced search functionality with filtering, sorting, and pagination for large datasets</li>
-              <li>Data validation and constraint enforcement at both application and database levels</li>
-              <li>Comprehensive audit logging for tracking changes and maintaining data history</li>
+              <li><strong>IPsec VPN:</strong> Protected inter-campus traffic and verified active security associations and successful end-to-end connectivity.</li>
+              <li><strong>Production design:</strong> Documented an IKEv2/AES-256/SHA-256 design while clearly separating Packet Tracer's feature limitations from the production recommendation.</li>
+              <li><strong>Management-plane hardening:</strong> SSHv2, AAA, management ACLs, login blocking and Quiet-Mode behaviour were tested.</li>
+              <li><strong>External attacker testing:</strong> A host on the external 203.0.113.0/24 network was used to test unauthorised management access.</li>
+              <li><strong>IPS design:</strong> Inline IPS placement was incorporated into the secure architecture and discussed as part of the defence-in-depth design.</li>
             </ul>
 
-            <h2>Technical Implementation</h2>
+            <h2>Evidence & Engineering Reflection</h2>
             <p>
-              The database schema follows best practices with proper normalization, foreign key relationships, and 
-              cascading operations. Implemented stored procedures for complex business logic and triggers for automatic 
-              data validation. Backend API built with Flask framework providing endpoints for CRUD operations with 
-              proper error handling and response formatting.
+              The submission recorded successful protected user connectivity, authorised administrator SSH access and
+              rejection of unauthorised management attempts. It also documented a WAN ACL sequence-order problem rather
+              than hiding it: a broad permit preceded a later SSH deny, so the observed management blocking was attributed
+              to the VTY ACL and a corrected ACL order was specified for implementation.
             </p>
 
-            <h2>Database Architecture</h2>
+            <div class="project-gallery">
+              <h2>Packet Tracer Evidence</h2>
+              <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/projects/cis-ga5/packet-tracer-topology.svg" alt="Bellville and District Six Packet Tracer topology"></div>
+                <div class="gallery-item"><i class="fas fa-lock"></i></div>
+                <div class="gallery-item"><i class="fas fa-shield-halved"></i></div>
+                <div class="gallery-item"><i class="fas fa-network-wired"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-tools"></i> Technologies & Concepts</h3>
+              <div class="tech-stack-list">
+                <div class="tech-stack-item"><span>Cisco Packet Tracer</span></div>
+                <div class="tech-stack-item"><span>IPsec VPN</span></div>
+                <div class="tech-stack-item"><span>IKEv2 production design</span></div>
+                <div class="tech-stack-item"><span>AES-256 / SHA-256 design</span></div>
+                <div class="tech-stack-item"><span>SSHv2 / AAA</span></div>
+                <div class="tech-stack-item"><span>ACLs & login protection</span></div>
+                <div class="tech-stack-item"><span>IPS / defence in depth</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT: NGN580S GA5 -->
+    <div id="projectNGNGA5" class="page-view">
+      <div class="project-detail">
+        <div class="project-detail-header">
+          <h1>NGN580S GA5 — Controller-Driven MPLS Traffic Engineering</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
+            OpenDaylight, PCEP, RESTCONF and RSVP-TE in a GNS3 IOS XRv testbed
+          </p>
+          <div class="project-meta">
+            <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+            <div class="meta-item"><i class="fas fa-route"></i><span>MPLS-TE / PCEP</span></div>
+            <div class="meta-item"><i class="fas fa-graduation-cap"></i><span>NGN580S GA5</span></div>
+          </div>
+        </div>
+
+        <div class="project-detail-image">
+          <img src="images/projects/ngn-ga5/architecture.svg" alt="NGN580S GA5 network and controller architecture">
+        </div>
+
+        <div class="project-detail-content">
+          <div class="detail-main">
+            <h2>Project Overview</h2>
+            <p>
+              Integrated three Cisco IOS XRv 6.1.2 routers in a GNS3 full mesh with an OSPF underlay, LDP and RSVP-TE.
+              R1 connected to OpenDaylight 0.20.2 Karaf using eBGP, while R1, R2 and R3 operated as stateful PCEP clients.
+              OpenDaylight was configured and exercised through RESTCONF requests from Postman.
+            </p>
+
+            <h2>What Was Demonstrated</h2>
             <ul>
-              <li>20+ interconnected tables with proper referential integrity constraints</li>
-              <li>Composite indexes on frequently queried columns improving query performance</li>
-              <li>Views for complex data aggregation and reporting requirements</li>
-              <li>Stored procedures for atomic operations and business logic enforcement</li>
-              <li>Transaction isolation levels configured for optimal concurrency control</li>
+              <li>Verified OSPF adjacency, LDP operation and PCEP sessions across all three routers.</li>
+              <li>Delegated an existing LSP to the controller and changed its path from R1–R2–R3 to the direct R1–R3 path.</li>
+              <li>Created, removed and re-instantiated controller-managed LSPs through OpenDaylight.</li>
+              <li>Carried 6,500 UDP datagrams through the controller-managed LSP with no loss in the recorded test.</li>
+              <li>Used the student-created <code>ga5_netcheck.py</code> verification tool, which passed all five checks.</li>
             </ul>
 
-            <h2>Results & Impact</h2>
+            <h2>Important Technical Interpretation</h2>
             <p>
-              Successfully delivered a production-ready system capable of managing 10,000+ infrastructure records 
-              with sub-second query response times. Implemented data backup and recovery procedures ensuring zero 
-              data loss. Project demonstrated strong understanding of database principles and full-stack development capabilities.
+              The route object was explicitly written in Postman and sent through OpenDaylight. The demonstrated paths were
+              therefore controller-enforced explicit routes; the report does not claim that OpenDaylight independently computed
+              the path from its Traffic Engineering Database.
             </p>
           </div>
 
           <div class="detail-sidebar">
             <div class="detail-card">
-              <h3><i class="fas fa-code"></i> Tech Stack</h3>
+              <h3><i class="fas fa-network-wired"></i> Stack</h3>
               <div class="tech-stack-list">
-                <div class="tech-stack-item">
-                  <i class="fas fa-database"></i>
-                  <span>MySQL</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fab fa-python"></i>
-                  <span>Python</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fas fa-fire"></i>
-                  <span>Flask Framework</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fas fa-layer-group"></i>
-                  <span>SQLAlchemy ORM</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fas fa-project-diagram"></i>
-                  <span>ERD Modeling</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fas fa-server"></i>
-                  <span>RESTful API</span>
-                </div>
-                <div class="tech-stack-item">
-                  <i class="fab fa-html5"></i>
-                  <span>Frontend (HTML/CSS)</span>
-                </div>
+                <div class="tech-stack-item"><span>GNS3</span></div>
+                <div class="tech-stack-item"><span>Cisco IOS XRv 6.1.2</span></div>
+                <div class="tech-stack-item"><span>OpenDaylight 0.20.2</span></div>
+                <div class="tech-stack-item"><span>PCEP</span></div>
+                <div class="tech-stack-item"><span>RESTCONF / Postman</span></div>
+                <div class="tech-stack-item"><span>OSPF / LDP / RSVP-TE</span></div>
               </div>
-            </div>
-
-            <div class="detail-card">
-              <h3><i class="fas fa-link"></i> Project Links</h3>
-              <div class="project-actions">
-                <a href="https://github.com/lindokuhlelanga" target="_blank" class="action-btn">
-                  <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <a href="resume.html" class="action-btn secondary">
-                  <i class="fas fa-file-pdf"></i> Project Documentation
-                </a>
-              </div>
-            </div>
-
-            <div class="detail-card">
-              <h3><i class="fas fa-trophy"></i> Achievements</h3>
-              <ul style="list-style: none; padding: 0;">
-                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>60%</strong> Faster Queries
-                </li>
-                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>10,000+</strong> Records Managed
-                </li>
-                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>100%</strong> ACID Compliance
-                </li>
-                <li style="padding: 0.7rem 0;">
-                  <strong>Zero</strong> Data Loss
-                </li>
-              </ul>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="project-gallery">
-          <h2>Database Schema & Interface</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <i class="fas fa-sitemap"></i>
-            </div>
-            <div class="gallery-item">
-              <i class="fas fa-table"></i>
-            </div>
-            <div class="gallery-item">
-              <i class="fas fa-chart-pie"></i>
-            </div>
-            <div class="gallery-item">
-              <i class="fas fa-code"></i>
+    <!-- PROJECT: NGN580S Final Summative -->
+    <div id="projectNGNFSA" class="page-view">
+      <div class="project-detail">
+        <div class="project-detail-header">
+          <h1>NGN580S Final Summative — Traffic Engineering Application</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
+            Live telemetry, congestion detection, path selection and controller-based MPLS-TE automation
+          </p>
+          <div class="project-meta">
+            <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+            <div class="meta-item"><i class="fab fa-python"></i><span>Python Network Automation</span></div>
+            <div class="meta-item"><i class="fas fa-graduation-cap"></i><span>NGN580S Final Summative</span></div>
+          </div>
+        </div>
+
+        <div class="project-detail-image">
+          <img src="images/projects/ngn-fsa/gui.svg" alt="NGN580S traffic engineering application GUI">
+        </div>
+
+        <div class="project-detail-content">
+          <div class="detail-main">
+            <h2>Engineering Problem</h2>
+            <p>
+              The application was built to detect when the R1→R3 demand would overload the OSPF transit route
+              R1–R2–R3, compare feasible candidate paths, act through the SDN controller and then prove the
+              network result using router CLI evidence.
+            </p>
+
+            <h2>Application Architecture</h2>
+            <p>
+              A Tkinter front end is separated from logic, telemetry, traffic-engineering and LSP workflow modules.
+              RESTCONF provides the controller interface, while a read-only Paramiko SSH adapter retrieves router
+              evidence. Network calls run in worker threads so the GUI remains responsive.
+            </p>
+
+            <h2>Measured Results</h2>
+            <ul>
+              <li>Congested transit path measured at <strong>92.7%</strong> utilisation.</li>
+              <li>Direct R1–R3 candidate measured at <strong>42.6%</strong>, a 50 percentage-point improvement.</li>
+              <li>All six required final tests passed.</li>
+              <li>Provisioning was verified after 3 seconds, rerouting after 21 seconds and teardown after 3 seconds.</li>
+              <li>Recorded iperf3 tests showed 0% datagram loss, including 10,454 baseline datagrams and 47,052 datagrams at the 815 kbit/s test rate.</li>
+              <li>When the controller was unavailable, the GUI reported <strong>UNKNOWN</strong> and disabled controller actions rather than guessing state.</li>
+            </ul>
+
+            <h2>Engineering Limitation Identified</h2>
+            <p>
+              The project documented an OpenDaylight <code>add-lsp</code> acknowledgement issue in the tested release.
+              Message tracing was used to identify the BGPCEP behaviour and a release-specific workaround was recorded,
+              rather than treating the controller as a black box.
+            </p>
+          </div>
+
+          <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-code"></i> Technologies</h3>
+              <div class="tech-stack-list">
+                <div class="tech-stack-item"><span>Python 3</span></div>
+                <div class="tech-stack-item"><span>Tkinter</span></div>
+                <div class="tech-stack-item"><span>Paramiko</span></div>
+                <div class="tech-stack-item"><span>RESTCONF</span></div>
+                <div class="tech-stack-item"><span>OpenDaylight</span></div>
+                <div class="tech-stack-item"><span>PCEP / MPLS-TE</span></div>
+                <div class="tech-stack-item"><span>GNS3 / IOS XRv</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1558,7 +1661,7 @@
           </div>
         </div>
         <div class="project-detail-image">
-          <i class="fas fa-bolt"></i>
+          <img src="images/projects/ieee-six-bus/topology.svg" alt="IEEE Six-Bus DIgSILENT power system model">
         </div>
         <div class="project-detail-content">
           <div class="detail-main">
@@ -1967,7 +2070,9 @@
     const projects = {
       'drone': 'projectDrone',
       'sdn': 'projectSDN',
-      'database': 'projectDatabase',
+      'cis-ga5': 'projectCISGA5',
+      'ngn-ga5': 'projectNGNGA5',
+      'ngn-fsa': 'projectNGNFSA',
       'fm': 'projectFM',
       'game': 'projectGame',
       'embedded': 'projectEmbedded',
