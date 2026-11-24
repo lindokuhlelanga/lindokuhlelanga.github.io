@@ -16,8 +16,10 @@ The site presents selected work across:
 ## Featured work
 
 - Kubernetes Security Framework — Honours research
+- Computer & Internetwork Security GA5 — inter-campus VPN, router hardening and attack testing
+- NGN580S GA5 — OpenDaylight/PCEP controller-driven MPLS traffic engineering
+- NGN580S Final Summative — Python traffic-engineering and network automation application
 - Autonomous Drone Navigation & AI Monitoring
-- Municipal Infrastructure Database
 - Network Traffic Engineering & Optimisation
 - Software-Defined Networking
 - IEEE Six-Bus Power System Analysis & Protection Study
