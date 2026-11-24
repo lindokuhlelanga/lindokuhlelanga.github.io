@@ -41,7 +41,7 @@
         <img src="images/photo.jpeg" alt="Lindokuhle Langa" class="sidebar-photo">
       </div>
       <div class="sidebar-name">Lindokuhle Langa</div>
-      <div class="sidebar-title">Computer Engineer</div>
+      <div class="sidebar-title">Computer Engineering Graduate</div>
     </div>
 
     <nav class="sidebar-nav">
@@ -83,7 +83,7 @@
         <a href="https://github.com/lindokuhlelanga" target="_blank" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="mailto:222038152@mycput.ac.za" title="Email">
+        <a href="mailto:lindokuhlelanga78@icloud.com" title="Email">
           <i class="fas fa-envelope"></i>
         </a>
       </div>
@@ -104,7 +104,7 @@
           <span>Dark</span>
         </button>
         
-        <a href="Lindokuhle_Langa_CV_2025.pdf" download class="download-cv-btn">
+        <a href="Lindokuhle_Langa_CV.pdf" download class="download-cv-btn">
           <i class="fas fa-download"></i>
           <span>Resume</span>
         </a>
@@ -150,7 +150,7 @@
       <div class="stats-section">
         <div class="stats-grid">
           <div class="stat-item">
-            <span class="stat-number" data-target="65">0</span>
+            <span class="stat-number" data-target="66">0</span>
             <span class="stat-label">Academic Average %</span>
           </div>
         </div>
@@ -160,12 +160,17 @@
       <section id="about">
         <h2 data-number="01.">About Me</h2>
         <p>
-          Obtained Bachelor of Engineering Technology in Computer Engineering at Cape Peninsula University of Technology,  
-          graduating in April 2026, also a Honours student. With hands-on experience in AI-powered systems, software-defined networking, 
-          and full-stack development, I'm passionate about creating innovative solutions in emerging technologies. 
-          My projects showcase proficiency in Python, C++, JavaScript, Network Automation, Bash scripting, and cloud computing, with a strong focus 
-          on real-time data processing. I'm eager to apply my skills in a dynamic graduate program where I can contribute to 
-          cutting-edge projects and continue growing as an engineer.
+          I am a Computer Engineering graduate from the Cape Peninsula University of Technology (CPUT) and a final-year
+          BEngTech Honours student in Computer Engineering. My work spans software development, Kubernetes security,
+          artificial intelligence, networking, embedded systems, databases and engineering analysis. I also work as an
+          IT Service Desk Operator at CPUT, where I troubleshoot end-user and connectivity issues, manage incidents and
+          communicate with users in a professional support environment.
+        </p>
+        <p>
+          I enjoy building and testing practical systems that connect software with real engineering problems. My current
+          portfolio includes Python and JavaScript applications, REST/database work, network optimisation, cloud-native
+          security research, AI computer vision, embedded control and electrical power-system analysis. I am open to graduate
+          and junior opportunities where I can continue developing as a software, systems or computer engineer.
         </p>
       </section>
 
@@ -175,14 +180,68 @@
         
         <div class="project-filters">
           <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="ai">AI/ML</button>
-          <button class="filter-btn" data-filter="iot">IoT</button>
+          <button class="filter-btn" data-filter="ai">AI / Data</button>
+          <button class="filter-btn" data-filter="security">Security</button>
           <button class="filter-btn" data-filter="networking">Networking</button>
-          <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
-          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="embedded">Embedded</button>
+          <button class="filter-btn" data-filter="electrical">Electrical</button>
+          <button class="filter-btn" data-filter="web">Software / Web</button>
         </div>
 
         <div class="projects-grid">
+
+          <!-- Flagship: Honours Kubernetes Security Research -->
+          <div class="project" data-category="security web" data-project="kubernetes">
+            <div class="project-image">
+              <i class="fas fa-shield-halved"></i>
+              <span class="project-category">Cybersecurity</span>
+            </div>
+            <div class="project-content">
+              <h3>Kubernetes Security Framework</h3>
+              <p>
+                Honours research on automated Kubernetes security posture assessment, policy enforcement and
+                controlled performance evaluation using repeatable test manifests and policy-as-code.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">OPA Gatekeeper</span>
+                <span class="tech-tag">Trivy</span>
+                <span class="tech-tag">kube-bench</span>
+                <span class="tech-tag">PowerShell</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/lindokuhlelanga/kubernetes-security-framework" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flagship: Power Systems -->
+          <div class="project" data-category="electrical" data-project="power-systems">
+            <div class="project-image">
+              <i class="fas fa-bolt"></i>
+              <span class="project-category">Power Systems</span>
+            </div>
+            <div class="project-content">
+              <h3>IEEE Six-Bus Power System Analysis</h3>
+              <p>
+                Six-bus power-system study covering per-unit conversion, Ybus formation, Newton-Raphson load flow,
+                MATLAB/Simulink and DIgSILENT modelling, three-phase short-circuit analysis and overcurrent protection.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">MATLAB/Simulink</span>
+                <span class="tech-tag">DIgSILENT</span>
+                <span class="tech-tag">Load Flow</span>
+                <span class="tech-tag">Protection</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" onclick="viewProject('power-systems'); return false;">
+                  <i class="fas fa-eye"></i> View Details
+                </a>
+              </div>
+            </div>
+          </div>
           
           <!-- Project 1: Autonomous Drone -->
           <div class="project" data-category="ai iot" data-project="drone">
@@ -193,7 +252,7 @@
             <div class="project-content">
               <h3>Autonomous Drone Navigation</h3>
               <p>
-                AI-powered drone with YOLO object detection achieving 80%+ accuracy, multi-threaded architecture, 
+                AI-powered drone with YOLOv8n object detection achieving 87% accuracy during project testing, multi-threaded architecture, 
                 and real-time data processing for intelligent navigation and obstacle avoidance.
               </p>
               <div class="tech-tags">
@@ -334,7 +393,7 @@
                   <span class="tech-tag">TinkerCad</span>
                 </div>
                 <div class="project-links">
-                  <a href="#" class="project-link" onclick="viewProject('Embedded'); return false;">
+                  <a href="#" class="project-link" onclick="viewProject('embedded'); return false;">
                     <i class="fas fa-eye"></i>View Details
                   </a>
                 </div>
@@ -374,146 +433,36 @@
       <!-- Skills Section -->
       <section id="skills">
         <h2 data-number="03.">Technical Skills</h2>
-        
-        <div class="skill-categories">
-          <button class="category-tab active" data-category="all">All Skills</button>
-          <button class="category-tab" data-category="programming">Programming</button>
-          <button class="category-tab" data-category="tools">Tools & Platforms</button>
-          <button class="category-tab" data-category="frameworks">Frameworks</button>
-        </div>
-
         <div class="skills-container">
-          
-          <div class="skill-item" data-progress="90" data-category="programming">
-            <div class="skill-header">
-              <i class="fab fa-python skill-icon"></i>
-              <span class="skill-name">Python</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 90%"></div>
-            </div>
-            <div class="skill-percentage">90%</div>
+
+          <div class="skill-item" data-category="programming">
+            <div class="skill-header"><i class="fas fa-code skill-icon"></i><span class="skill-name">Programming</span></div>
+            <p>Python, Java, JavaScript, C, C++, SQL, Bash, HTML5 and CSS3.</p>
           </div>
 
-          <div class="skill-item" data-progress="85" data-category="programming">
-            <div class="skill-header">
-              <i class="fab fa-cuttlefish skill-icon"></i>
-              <span class="skill-name">C++</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 85%"></div>
-            </div>
-            <div class="skill-percentage">85%</div>
+          <div class="skill-item" data-category="frameworks">
+            <div class="skill-header"><i class="fas fa-layer-group skill-icon"></i><span class="skill-name">Software & Data</span></div>
+            <p>Flask, SQLAlchemy, REST APIs, MySQL, Git, GitHub, Jupyter Lab, Pandas and data visualisation.</p>
           </div>
 
-          <div class="skill-item" data-progress="80" data-category="programming">
-            <div class="skill-header">
-              <i class="fab fa-js skill-icon"></i>
-              <span class="skill-name">JavaScript</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 80%"></div>
-            </div>
-            <div class="skill-percentage">80%</div>
+          <div class="skill-item" data-category="tools">
+            <div class="skill-header"><i class="fas fa-cubes skill-icon"></i><span class="skill-name">Cloud-Native & Security</span></div>
+            <p>Docker, Kubernetes, Linux (Ubuntu), OPA Gatekeeper, Trivy, kube-bench, policy-as-code and GitHub Actions exposure.</p>
           </div>
 
-          <div class="skill-item" data-progress="88" data-category="programming">
-            <div class="skill-header">
-              <i class="fab fa-html5 skill-icon"></i>
-              <span class="skill-name">HTML5 & CSS3</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 88%"></div>
-            </div>
-            <div class="skill-percentage">88%</div>
+          <div class="skill-item" data-category="frameworks">
+            <div class="skill-header"><i class="fas fa-brain skill-icon"></i><span class="skill-name">AI & Engineering Analysis</span></div>
+            <p>YOLOv8, OpenCV, NetworkX, PuLP, Matplotlib, optimisation, graph modelling and real-time processing.</p>
           </div>
 
-          <div class="skill-item" data-progress="75" data-category="programming">
-            <div class="skill-header">
-              <i class="fab fa-java skill-icon"></i>
-              <span class="skill-name">Java</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 75%"></div>
-            </div>
-            <div class="skill-percentage">75%</div>
+          <div class="skill-item" data-category="tools">
+            <div class="skill-header"><i class="fas fa-network-wired skill-icon"></i><span class="skill-name">Networking</span></div>
+            <p>TCP/IP, VLANs, OSPF, BGP, IS-IS, SDN, GNS3, Cisco Packet Tracer and performance troubleshooting.</p>
           </div>
 
-          <div class="skill-item" data-progress="82" data-category="tools">
-            <div class="skill-header">
-              <i class="fas fa-database skill-icon"></i>
-              <span class="skill-name">MySQL</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 82%"></div>
-            </div>
-            <div class="skill-percentage">82%</div>
-          </div>
-
-          <div class="skill-item" data-progress="78" data-category="tools">
-            <div class="skill-header">
-              <i class="fab fa-git-alt skill-icon"></i>
-              <span class="skill-name">Git & GitHub</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 78%"></div>
-            </div>
-            <div class="skill-percentage">78%</div>
-          </div>
-
-          <div class="skill-item" data-progress="80" data-category="tools">
-            <div class="skill-header">
-              <i class="fab fa-aws skill-icon"></i>
-              <span class="skill-name">AWS</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 80%"></div>
-            </div>
-            <div class="skill-percentage">80%</div>
-          </div>
-
-          <div class="skill-item" data-progress="76" data-category="tools">
-            <div class="skill-header">
-              <i class="fab fa-docker skill-icon"></i>
-              <span class="skill-name">Docker</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 76%"></div>
-            </div>
-            <div class="skill-percentage">76%</div>
-          </div>
-
-          <div class="skill-item" data-progress="85" data-category="frameworks">
-            <div class="skill-header">
-              <i class="fas fa-brain skill-icon"></i>
-              <span class="skill-name">Computer Vision (YOLO)</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 85%"></div>
-            </div>
-            <div class="skill-percentage">85%</div>
-          </div>
-
-          <div class="skill-item" data-progress="72" data-category="frameworks">
-            <div class="skill-header">
-              <i class="fab fa-node-js skill-icon"></i>
-              <span class="skill-name">Node.js</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 72%"></div>
-            </div>
-            <div class="skill-percentage">72%</div>
-          </div>
-
-          <div class="skill-item" data-progress="75" data-category="programming">
-            <div class="skill-header">
-              <i class="fab fa-linux skill-icon"></i>
-              <span class="skill-name">Linux (Ubuntu)</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 75%"></div>
-            </div>
-            <div class="skill-percentage">75%</div>
+          <div class="skill-item" data-category="tools">
+            <div class="skill-header"><i class="fas fa-microchip skill-icon"></i><span class="skill-name">Embedded & Electrical</span></div>
+            <p>Arduino, ESP32, UART/PySerial, sensors, relay control, electronics, MATLAB/Simulink, power-flow and protection fundamentals.</p>
           </div>
 
         </div>
@@ -523,15 +472,16 @@
       <section id="experience">
         <h2 data-number="04.">Education & Experience</h2>
         <div class="timeline">
-          
+
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-date">2022 - April 2026</div>
-              <div class="timeline-title">BEngTech Computer Engineering</div>
+              <div class="timeline-date">March 2026 - Present</div>
+              <div class="timeline-title">IT Service Desk Operator</div>
               <div class="timeline-description">
-                Cape Peninsula University of Technology - Specializing in AI, embedded systems, 
-                cloud computing, and software development. Academic Average: 65%
+                Cape Peninsula University of Technology. Provide first-line support for software, connectivity,
+                account and end-user issues; manage incidents through resolution or escalation; and communicate
+                clearly with staff and students.
               </div>
             </div>
           </div>
@@ -539,11 +489,11 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-date">October 2025</div>
-              <div class="timeline-title">Autonomous Drone Navigation Project</div>
+              <div class="timeline-date">2026 - Final Year</div>
+              <div class="timeline-title">BEngTech Honours - Computer Engineering</div>
               <div class="timeline-description">
-                Led development of AI-powered drone system achieving 80%+ object detection accuracy 
-                using YOLO algorithm with multi-threaded architecture for real-time processing.
+                Cape Peninsula University of Technology. Honours research focuses on automated Kubernetes security
+                posture assessment and policy enforcement using Gatekeeper, Trivy, kube-bench and repeatable testing.
               </div>
             </div>
           </div>
@@ -551,23 +501,11 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-date">September 2025</div>
-              <div class="timeline-title">Software-Defined Networking Project</div>
+              <div class="timeline-date">Completed 2026</div>
+              <div class="timeline-title">BEngTech - Computer Engineering</div>
               <div class="timeline-description">
-                Designed and implemented network system using IS-IS, OSPF, and BGP protocols with 
-                automated performance monitoring and optimization algorithms.
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">May 2024</div>
-              <div class="timeline-title">Web Development & Graphics Project</div>
-              <div class="timeline-description">
-                Created interactive WebGL game demonstrating real-time rendering, physics simulation, 
-                and event-driven architecture for browser-based applications.
+                Cape Peninsula University of Technology. Academic average: 66%. Study areas included software design,
+                databases, operating systems, AI, embedded systems, computer networks and electronic communications.
               </div>
             </div>
           </div>
@@ -577,43 +515,28 @@
 
       <!-- Certifications -->
       <section id="certifications">
-        <h2 data-number="05.">Certifications</h2>
+        <h2 data-number="05.">Certifications & Training</h2>
         <div class="certifications-grid">
-          
+
           <div class="certification-card">
-            <div class="cert-icon">
-              <i class="fab fa-aws"></i>
-            </div>
-            <div class="cert-title">AWS Cloud Practitioner Essentials</div>
-            <div class="cert-issuer">Amazon Web Services</div>
+            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="cert-title">Practical Software-Defined Networking & OpenFlow</div>
+            <div class="cert-issuer">LinkedIn Learning</div>
             <div class="cert-date">2025</div>
           </div>
 
           <div class="certification-card">
-            <div class="cert-icon">
-              <i class="fas fa-network-wired"></i>
-            </div>
-            <div class="cert-title">Software-Defined Networking & OpenFlow</div>
-            <div class="cert-issuer">LinkedIn Learning</div>
-            <div class="cert-date">July 2025</div>
-          </div>
-
-          <div class="certification-card">
-            <div class="cert-icon">
-              <i class="fab fa-cisco"></i>
-            </div>
+            <div class="cert-icon"><i class="fas fa-route"></i></div>
             <div class="cert-title">Cisco Networking Foundations</div>
             <div class="cert-issuer">LinkedIn Learning</div>
-            <div class="cert-date">April 2025</div>
+            <div class="cert-date">2025</div>
           </div>
 
           <div class="certification-card">
-            <div class="cert-icon">
-              <i class="fas fa-server"></i>
-            </div>
+            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
             <div class="cert-title">Learning IP Addressing</div>
             <div class="cert-issuer">LinkedIn Learning</div>
-            <div class="cert-date">April 2025</div>
+            <div class="cert-date">2025</div>
           </div>
 
         </div>
@@ -623,7 +546,7 @@
       <section id="contact">
         <h2 data-number="06.">Get In Touch</h2>
         <p class="contact-intro">
-          I'm currently seeking graduate program opportunities and open to exciting projects. 
+          I'm open to graduate and junior opportunities in software, systems, cybersecurity, networking, embedded and engineering technology. 
           Let's connect and discuss how I can contribute to your team!
         </p>
         
@@ -635,12 +558,12 @@
 
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
-            <a href="mailto:222038152@mycput.ac.za">222038152@mycput.ac.za</a>
+            <a href="mailto:lindokuhlelanga78@icloud.com">lindokuhlelanga78@icloud.com</a>
           </div>
 
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
-            <span>Cape Town, Johannesburg, South Africa</span>
+            <span>South Africa | Cape Town & Johannesburg | Open to relocation</span>
           </div>
         </div>
 
@@ -651,7 +574,7 @@
           <a href="https://github.com/lindokuhlelanga" target="_blank" class="social-link" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
-          <a href="mailto:222038152@mycput.ac.za" class="social-link" title="Email">
+          <a href="mailto:lindokuhlelanga78@icloud.com" class="social-link" title="Email">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -691,7 +614,7 @@
 
       <!-- Footer -->
       <footer>
-        <p>&copy; 2025 Lindokuhle Langa. Graduating April 2026 - Available for Graduate Programs.</p>
+        <p>&copy; 2026 Lindokuhle Langa. Computer Engineering Graduate & Final-Year Honours Student.</p>
         <div class="footer-links">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -700,7 +623,7 @@
           <a href="#contact">Contact</a>
         </div>
         <p style="margin-top: 1rem; font-size: 0.85rem;">
-          Built with HTML, CSS & JavaScript | Last Updated: November 2025
+          Built with HTML, CSS & JavaScript | Last Updated: November 2026
         </p>
       </footer>
     </div>
@@ -804,7 +727,7 @@
 
             <h2>Challenges & Solutions</h2>
             <ul>
-              <li><strong>Real-time Performance:</strong> Optimized YOLO model by reducing network depth and implementing GPU acceleration, achieving 60+ FPS on embedded hardware</li>
+              <li><strong>Real-time Performance:</strong> Used the YOLOv8n model with standard PC processing to balance detection accuracy and latency, with testing showing 87% accuracy and detection latency below 1.5 seconds</li>
               <li><strong>Data Synchronization:</strong> Implemented thread-safe queue systems with mutex locks to prevent race conditions in multi-threaded environment</li>
               <li><strong>Power Efficiency:</strong> Developed adaptive processing modes that adjust detection frequency based on environmental complexity</li>
             </ul>
@@ -888,19 +811,19 @@
                   <strong>80%+</strong> Detection Accuracy
                 </li>
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>60+ FPS</strong> Real-time Processing
+                  <strong>&lt;1.5 s</strong> Detection Latency
                 </li>
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>95%+</strong> Obstacle Avoidance
+                  <strong>10–12 min</strong> Validated Operation
                 </li>
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>Sub-100ms</strong> Response Latency
+                  <strong>R2,920</strong> Prototype Cost
                 </li>
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
                   <strong>Multi-component</strong> IoT Integration
                 </li>
                 <li style="padding: 0.7rem 0;">
-                  <strong>Production-Ready</strong> System Design
+                  <strong>Integrated</strong> Prototype
                 </li>
               </ul>
 </div>
@@ -1578,6 +1501,103 @@
       </div>
     </div>
 
+        <!-- PROJECT: Embedded Energy Controller -->
+    <div id="projectEmbedded" class="page-view">
+      <div class="project-detail">
+        <div class="project-detail-header">
+          <h1>Embedded Energy-Aware Washing Machine Controller</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
+            Arduino-based control logic with sensor feedback and energy-aware operating behaviour
+          </p>
+        </div>
+        <div class="project-detail-image">
+          <img src="images/WashingMachineImg.png" alt="Embedded energy-aware washing machine controller">
+        </div>
+        <div class="project-detail-content">
+          <div class="detail-main">
+            <h2>Project Overview</h2>
+            <p>
+              Developed an Arduino-based embedded controller that combines sensor feedback, operating-state logic,
+              status monitoring and energy-aware decisions. The project demonstrates hardware-software integration,
+              C/C++ programming, input validation and practical troubleshooting of an electromechanical control prototype.
+            </p>
+            <h2>Engineering Focus</h2>
+            <ul>
+              <li>Embedded C/C++ control logic and state transitions.</li>
+              <li>Sensor-driven monitoring and control decisions.</li>
+              <li>Hardware/firmware integration and structured debugging.</li>
+              <li>Energy-aware operating logic and safe control behaviour.</li>
+            </ul>
+          </div>
+          <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-code"></i> Technologies</h3>
+              <div class="tech-stack-list">
+                <div class="tech-stack-item"><span>Arduino / C++</span></div>
+                <div class="tech-stack-item"><span>Sensors & electronics</span></div>
+                <div class="tech-stack-item"><span>Embedded control</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT: IEEE Six-Bus Power Systems -->
+    <div id="projectPowerSystems" class="page-view">
+      <div class="project-detail">
+        <div class="project-detail-header">
+          <h1>IEEE Six-Bus Power System Analysis & Protection Study</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
+            Load flow, network modelling, short-circuit analysis and overcurrent protection
+          </p>
+          <div class="project-meta">
+            <div class="meta-item"><i class="fas fa-bolt"></i><span>Electrical Power Systems</span></div>
+            <div class="meta-item"><i class="fas fa-network-wired"></i><span>6 buses / 8 transmission lines</span></div>
+            <div class="meta-item"><i class="fas fa-chart-line"></i><span>150 MVA / 132 kV base</span></div>
+          </div>
+        </div>
+        <div class="project-detail-image">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <div class="project-detail-content">
+          <div class="detail-main">
+            <h2>Project Overview</h2>
+            <p>
+              Analysed an IEEE-style six-bus transmission network using a common 150 MVA, 132 kV base.
+              The work covered per-unit conversion, branch calculations, Ybus formation and Newton-Raphson
+              load-flow analysis, supported by MATLAB/Simulink and DIgSILENT PowerFactory models.
+            </p>
+            <h2>Technical Work</h2>
+            <ul>
+              <li>Converted network quantities to a common per-unit base and formed the bus-admittance matrix.</li>
+              <li>Applied Newton-Raphson bus-state updates to evaluate voltage magnitudes, phase angles and power balance.</li>
+              <li>Modelled the six-bus network in MATLAB/Simulink and DIgSILENT PowerFactory.</li>
+              <li>Documented a three-phase short-circuit study using IEC 60909 settings.</li>
+              <li>Evaluated overcurrent protection using current-transformer and relay settings/characteristics.</li>
+            </ul>
+            <h2>Portfolio Note</h2>
+            <p>
+              The public portfolio version focuses on the technical implementation and engineering methods.
+              Student-identifying submission material and assessment-specific information are intentionally excluded.
+            </p>
+          </div>
+          <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-tools"></i> Tools & Methods</h3>
+              <div class="tech-stack-list">
+                <div class="tech-stack-item"><span>MATLAB / Simulink</span></div>
+                <div class="tech-stack-item"><span>DIgSILENT PowerFactory</span></div>
+                <div class="tech-stack-item"><span>Newton-Raphson load flow</span></div>
+                <div class="tech-stack-item"><span>IEC 60909 fault study</span></div>
+                <div class="tech-stack-item"><span>Overcurrent protection</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
         <!-- PROJECT 6: Network Traffic Optimization -->
     <div id="projectNetworkOptimization" class="page-view">
       <div class="project-detail">
@@ -1838,10 +1858,10 @@
     const typingText = document.getElementById('typingText');
     const texts = [
       'Computer Engineering Graduate',
-      'AI & Machine Learning Enthusiast',
-      'Full-Stack Developer',
-      'Cloud & DevOps Explorer',
-      'Graduating April 2026'
+      'Final-Year Honours Student',
+      'Software & Systems Developer',
+      'Kubernetes Security Researcher',
+      'Embedded, Networking & AI Builder'
     ];
     let textIndex = 0;
     let charIndex = 0;
@@ -1950,6 +1970,8 @@
       'database': 'projectDatabase',
       'fm': 'projectFM',
       'game': 'projectGame',
+      'embedded': 'projectEmbedded',
+      'power-systems': 'projectPowerSystems',
       'network-optimization': 'projectNetworkOptimization'
     };
 
@@ -2210,7 +2232,7 @@
             throw new Error('Form submission failed');
           }
         } catch (error) {
-          formStatus.textContent = 'Oops! Something went wrong. Please email me directly at 222038152@mycput.ac.za';
+          formStatus.textContent = 'Oops! Something went wrong. Please email me directly at lindokuhlelanga78@icloud.com';
           formStatus.className = 'form-status error';
           formStatus.style.display = 'block';
         }
@@ -2226,8 +2248,8 @@
 
     // Console Message
     console.log('%c👋 Welcome to my portfolio!', 'color: #ffd700; font-size: 24px; font-weight: bold;');
-    console.log('%cFinal Year Computer Engineering Student | Graduating April 2026', 'color: #a5b4c7; font-size: 14px;');
-    console.log('%c📧 222038152@mycput.ac.za | 📱 073 435 0870', 'color: #ffd700; font-size: 14px;');
+    console.log('%cFinal Year Computer Engineering Student | Final-Year Honours Student', 'color: #a5b4c7; font-size: 14px;');
+    console.log('%c📧 lindokuhlelanga78@icloud.com | 📱 073 435 0870', 'color: #ffd700; font-size: 14px;');
     console.log('%c💼 Available for Graduate Programs & Opportunities', 'color: #10b981; font-size: 14px; font-weight: bold;');
   </script>
 
