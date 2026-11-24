@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lindokuhle Langa - Resume</title>
+  <style>
+    :root { --text:#111; --muted:#444; --line:#222; --bg:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f4f4f4; color:var(--text); font-family:Arial,Helvetica,sans-serif; }
+    .resume { width:min(900px,96%); margin:24px auto; background:var(--bg); padding:34px 44px; box-shadow:0 4px 24px rgba(0,0,0,.08); }
+    h1 { margin:0; text-align:center; font-size:28px; letter-spacing:.3px; }
+    .tagline,.contact { text-align:center; margin-top:6px; }
+    .tagline { font-weight:700; }
+    .contact { font-size:14px; color:var(--muted); }
+    .contact a { color:inherit; }
+    h2 { font-size:17px; margin:18px 0 7px; padding-bottom:3px; border-bottom:1px solid var(--line); }
+    p { margin:4px 0; line-height:1.38; font-size:14px; }
+    ul { margin:5px 0 8px 20px; padding:0; }
+    li { margin:3px 0; line-height:1.35; font-size:14px; }
+    .item-title { font-weight:700; }
+    .tools { color:var(--muted); }
+    .actions { text-align:center; margin:18px auto 0; }
+    .actions button,.actions a { display:inline-block; margin:4px; padding:9px 14px; border:1px solid #111; background:#fff; color:#111; text-decoration:none; cursor:pointer; border-radius:4px; }
+    @media print {
+      body { background:#fff; }
+      .resume { width:100%; margin:0; padding:18mm 15mm; box-shadow:none; }
+      .actions { display:none; }
+      a { text-decoration:none; color:#111; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <h1>LINDOKUHLE LANGA</h1>
+    <div class="tagline">Computer Engineering Graduate | Final-Year Honours | Software, Systems & Engineering</div>
+    <div class="contact">
+      South Africa | Cape Town & Johannesburg | Open to relocation |
+      073 435 0870 |
+      <a href="mailto:lindokuhlelanga78@icloud.com">lindokuhlelanga78@icloud.com</a> |
+      <a href="https://github.com/lindokuhlelanga">GitHub</a> |
+      <a href="https://lindokuhlelanga.github.io">Portfolio</a>
+    </div>
+
+    <h2>PROFESSIONAL SUMMARY</h2>
+    <p>Computer Engineering graduate and final-year BEngTech Honours student at CPUT with practical experience in software development, cloud-native security, networking, embedded systems, databases, artificial intelligence and engineering analysis. Experienced in Python, JavaScript, Java, C/C++, SQL, Linux, Docker, Kubernetes, Git, MySQL and REST-style development through academic, research and personal projects. Currently working as an IT Service Desk Operator, strengthening troubleshooting, communication, incident management and customer-focused problem solving.</p>
+
+    <h2>EDUCATION</h2>
+    <p><span class="item-title">Bachelor of Engineering Technology Honours - Computer Engineering</span> | Cape Peninsula University of Technology | Final Year, 2026</p>
+    <ul><li>Honours research: automated Kubernetes security posture assessment and policy enforcement using OPA Gatekeeper, Trivy, kube-bench, GitHub Actions and repeatable testing.</li></ul>
+    <p><span class="item-title">Bachelor of Engineering Technology - Computer Engineering</span> | Cape Peninsula University of Technology | Completed 2026 | Average: 66%</p>
+
+    <h2>PROFESSIONAL EXPERIENCE</h2>
+    <p><span class="item-title">IT Service Desk Operator</span> | Cape Peninsula University of Technology | March 2026 - Present</p>
+    <ul>
+      <li>Provide first-line support for software, connectivity, account and end-user issues using structured troubleshooting and clear communication.</li>
+      <li>Manage incidents from logging through resolution or escalation and collaborate with senior IT personnel on complex issues.</li>
+      <li>Prioritise requests, document troubleshooting steps and maintain a professional customer-focused approach.</li>
+    </ul>
+
+    <h2>TECHNICAL SKILLS</h2>
+    <p><strong>Programming:</strong> Python, Java, JavaScript, C++, C, SQL, Bash, HTML5, CSS3</p>
+    <p><strong>Software & Data:</strong> Flask, SQLAlchemy, REST APIs, MySQL, Git, GitHub, Jupyter Lab, Pandas, Matplotlib</p>
+    <p><strong>Cloud-Native & Security:</strong> Docker, Kubernetes, Linux (Ubuntu), OPA Gatekeeper, Trivy, kube-bench, policy-as-code, GitHub Actions exposure</p>
+    <p><strong>Networking:</strong> TCP/IP, VLANs, OSPF, BGP, IS-IS, SDN, GNS3, Cisco Packet Tracer, network optimisation</p>
+    <p><strong>AI & Engineering:</strong> YOLOv8, OpenCV, NetworkX, PuLP, MATLAB/Simulink, DIgSILENT PowerFactory</p>
+    <p><strong>Embedded:</strong> Arduino, ESP32, UART/PySerial, sensors, relay control, hardware-software integration</p>
+
+    <h2>SELECTED PROJECTS</h2>
+    <p><span class="item-title">Kubernetes Security Posture Assessment & Policy Enforcement Framework</span> <span class="tools">| Kubernetes, OPA Gatekeeper, Trivy, kube-bench</span></p>
+    <ul><li>Designed automated security assessment, policy validation, repeatable insecure/compliant manifest testing and controlled admission-latency experiments.</li></ul>
+
+    <p><span class="item-title">Autonomous Drone Navigation & AI Monitoring System</span> <span class="tools">| Python, YOLOv8, OpenCV, PyQt5, Arduino</span></p>
+    <ul><li>Built an integrated AI monitoring prototype; project testing recorded 87% object-detection accuracy and detection latency below 1.5 seconds.</li></ul>
+
+    <p><span class="item-title">Municipal Infrastructure Database Application</span> <span class="tools">| Python, Flask, MySQL, SQLAlchemy, REST</span></p>
+    <ul><li>Designed relational data structures, CRUD workflows, validation, transactions and REST-style backend components.</li></ul>
+
+    <p><span class="item-title">Network Traffic Engineering & Optimisation</span> <span class="tools">| Python, NetworkX, PuLP, Matplotlib</span></p>
+    <ul><li>Implemented flow-optimisation models on a 32-node topology and achieved a supported 14% maximum-utilisation result across five simultaneous demands.</li></ul>
+
+    <p><span class="item-title">Software-Defined Network System</span> <span class="tools">| Python, OSPF, IS-IS, BGP, GNS3</span></p>
+    <ul><li>Combined routing, monitoring and software-driven automation in a virtual enterprise network.</li></ul>
+
+    <p><span class="item-title">IEEE Six-Bus Power System Analysis & Protection Study</span> <span class="tools">| MATLAB/Simulink, DIgSILENT PowerFactory</span></p>
+    <ul><li>Covered per-unit conversion, Ybus formation, Newton-Raphson load flow, three-phase short-circuit analysis and overcurrent protection.</li></ul>
+
+    <p><span class="item-title">Embedded Smart-Energy Control System</span> <span class="tools">| ESP32, Arduino, INA219, Sensors, Relays</span></p>
+    <ul><li>Integrated microcontrollers, sensors, monitoring, serial communication and relay control in a smart load-management prototype.</li></ul>
+
+    <p><span class="item-title">WebGL Flappy Bird Game</span> <span class="tools">| JavaScript, WebGL, HTML5, CSS3</span></p>
+    <ul><li>Implemented WebGL rendering, shaders, event-driven input, collision detection, score tracking, audio and responsive behaviour.</li></ul>
+
+    <h2>CERTIFICATIONS & TRAINING</h2>
+    <p>Practical Software-Defined Networking and OpenFlow | Cisco Networking Foundations | Learning IP Addressing</p>
+
+    <div class="actions">
+      <button onclick="window.print()">Print / Save as PDF</button>
+      <a href="index.html">Back to Portfolio</a>
+    </div>
+  </main>
+</body>
+</html>
