@@ -193,14 +193,14 @@
           <!-- Flagship: Honours Kubernetes Security Research -->
           <div class="project" data-category="security web" data-project="kubernetes">
             <div class="project-image">
-              <i class="fas fa-shield-halved"></i>
+              <img src="images/projects/kubernetes/architecture.jpg" alt="Three-stage Kubernetes security framework architecture" loading="lazy">
               <span class="project-category">Cybersecurity</span>
             </div>
             <div class="project-content">
               <h3>Kubernetes Security Framework</h3>
               <p>
-                Honours research on automated Kubernetes security posture assessment, policy enforcement and
-                controlled performance evaluation using repeatable test manifests and policy-as-code.
+                Honours research: a three-stage framework that scans images in CI (Trivy), blocks unsafe workloads at
+                admission (15 Gatekeeper policies, 33/33 correct decisions) and audits the cluster (kube-bench, 131 checks).
               </p>
               <div class="tech-tags">
                 <span class="tech-tag">Kubernetes</span>
@@ -210,8 +210,41 @@
                 <span class="tech-tag">PowerShell</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/lindokuhlelanga/kubernetes-security-framework" target="_blank" class="project-link">
-                  <i class="fab fa-github"></i> View Repository
+                <a href="#" class="project-link" onclick="viewProject('kubernetes'); return false;">
+                  <i class="fas fa-eye"></i> View Details
+                </a>
+                <a href="https://github.com/lindokuhlelanga/kubernetes-security-framework" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: AI Smart Power Management -->
+          <div class="project" data-category="embedded ai electrical" data-project="smart-power">
+            <div class="project-image">
+              <img src="images/projects/smart-power/prototype.jpg" alt="ESP32 smart power prototype with LCD, relays and status LEDs" loading="lazy">
+              <span class="project-category">Embedded / AI</span>
+            </div>
+            <div class="project-content">
+              <h3>AI Smart Power &amp; Load Prioritisation</h3>
+              <p>
+                ESP32 prototype that predicts demand with a Random Forest model and sheds low-priority loads over MQTT to
+                stay under a 500 W limit. 3/3 relay scenarios passed, average acknowledgement 151 ms.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">MQTT</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">scikit-learn</span>
+                <span class="tech-tag">Node-RED</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" onclick="viewProject('smart-power'); return false;">
+                  <i class="fas fa-eye"></i> View Details
+                </a>
+                <a href="https://github.com/lindokuhlelanga/ai-smart-power-load-prioritization" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Code
                 </a>
               </div>
             </div>
@@ -246,7 +279,7 @@
           <!-- Project 1: Autonomous Drone -->
           <div class="project" data-category="ai iot" data-project="drone">
             <div class="project-image">
-              <img src="images/DroneSystem.png">
+              <img src="images/DroneSystem.png" alt="Autonomous drone navigation system overview">
               <span class="project-category">AI/ML</span>
             </div>
             <div class="project-content">
@@ -272,7 +305,7 @@
           <!-- Project 2: Software-Defined Network -->
           <div class="project" data-category="networking" data-project="sdn">
             <div class="project-image">
-              <img src="images/SDN.png">
+              <img src="images/SDN.png" alt="Software-defined network topology">
               <span class="project-category">Networking</span>
             </div>
             <div class="project-content">
@@ -299,7 +332,7 @@
           <!-- Project: Computer & Internetwork Security GA5 -->
           <div class="project" data-category="security networking" data-project="cis-ga5">
             <div class="project-image">
-              <img src="images/projects/cis-ga5/packet-tracer-topology.svg" alt="CIS580S GA5 Packet Tracer inter-campus security topology">
+              <img src="images/projects/cis-ga5/topology.jpg" alt="Packet Tracer topology of the Bellville and District Six campuses" loading="lazy">
               <span class="project-category">Network Security</span>
             </div>
             <div class="project-content">
@@ -318,6 +351,9 @@
                 <a href="#" class="project-link" onclick="viewProject('cis-ga5'); return false;">
                   <i class="fas fa-eye"></i> View Details
                 </a>
+                <a href="https://github.com/lindokuhlelanga/cis-ipsec-vpn-router-hardening" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
               </div>
             </div>
           </div>
@@ -325,7 +361,7 @@
           <!-- Project: Next Generation Networks GA5 -->
           <div class="project" data-category="networking" data-project="ngn-ga5">
             <div class="project-image">
-              <img src="images/projects/ngn-ga5/architecture.svg" alt="NGN580S GA5 controller-driven MPLS traffic engineering architecture">
+              <img src="images/projects/ngn-ga5/topology.jpg" alt="GNS3 topology of the three-router MPLS network and controller" loading="lazy">
               <span class="project-category">Next Generation Networks</span>
             </div>
             <div class="project-content">
@@ -344,6 +380,9 @@
                 <a href="#" class="project-link" onclick="viewProject('ngn-ga5'); return false;">
                   <i class="fas fa-eye"></i> View Details
                 </a>
+                <a href="https://github.com/lindokuhlelanga/ngn-pce-mpls-traffic-engineering" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
               </div>
             </div>
           </div>
@@ -351,7 +390,7 @@
           <!-- Project: NGN Final Summative -->
           <div class="project" data-category="networking web" data-project="ngn-fsa">
             <div class="project-image">
-              <img src="images/projects/ngn-fsa/gui.svg" alt="NGN580S traffic engineering application GUI">
+              <img src="images/projects/ngn-fsa/main-window.jpg" alt="SDN Traffic Engineering Manager main window" loading="lazy">
               <span class="project-category">Network Automation</span>
             </div>
             <div class="project-content">
@@ -370,6 +409,9 @@
                 <a href="#" class="project-link" onclick="viewProject('ngn-fsa'); return false;">
                   <i class="fas fa-eye"></i> View Details
                 </a>
+                <a href="https://github.com/lindokuhlelanga/sdn-traffic-engineering-manager" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
               </div>
             </div>
           </div>
@@ -377,7 +419,7 @@
           <!-- Project 4: FM Transmitter -->
           <div class="project" data-category="embedded" data-project="fm">
             <div class="project-image">
-              <img src="images/FM.png">
+              <img src="images/FM.png" alt="FM transmitter and receiver circuit">
               <span class="project-category">Embedded</span>
             </div>
             <div class="project-content">
@@ -403,7 +445,7 @@
           <!-- Project 5: Flappy Bird Game -->
           <div class="project" data-category="web" data-project="game">
             <div class="project-image">
-              <img src="images/FlappybirdImg.png">
+              <img src="images/FlappybirdImg.png" alt="WebGL Flappy Bird game screenshot">
               <span class="project-category">Web Dev</span>
             </div>
             <div class="project-content">
@@ -431,15 +473,15 @@
           <!--Project 6: Solar Washing Machine Simulation-->
           <div class="project" data-category="embedded" data-project="simulation">
             <div class="project-image">
-              <img src="images/WashingMachineImg.png">
+              <img src="images/WashingMachineImg.png" alt="Energy-aware washing machine controller prototype">
               <span class="project-category">Embedded</span>
             </div>
             <div class="project-content">
-                <h3>Solar Washing Machine</h3>
+                <h3>Energy-Aware Washing Machine Controller</h3>
                 <p>
                   Arduino-Based Energy Management System with Solar Optimization
                 </p>
-                <div class="tech-tag">
+                <div class="tech-tags">
                   <span class="tech-tag">C++</span>
                   <span class="tech-tag">Arduino</span>
                   <span class="tech-tag">Electronics</span>
@@ -456,7 +498,7 @@
           <!--Project 7: Network Traffic Optimization-->
           <div class="project" data-category="networking" data-project="network-optimization">
             <div class="project-image">
-              <img src="images/mcf_visualization.png">
+              <img src="images/mcf_visualization.png" alt="Multi-commodity flow optimisation visualisation">
               <span class="project-category">Networking</span>
             </div>
             <div class="project-content">
@@ -722,20 +764,20 @@
             <p>
               Developed a sophisticated autonomous drone navigation system integrating AI-powered object detection, 
               multi-threaded architecture, and real-time data processing. The project demonstrates advanced software 
-              engineering principles applied to embedded systems and robotics. The aboveshows the system design of 
+              engineering principles applied to embedded systems and robotics. The diagram above shows the system design of 
               the entire Autonomous Drone Navigation System with Alerts.
             </p>
 
             <h2>Key Features</h2>
             <ul>
-              <li><strong>AI-Powered Detection:</strong> YOLOv8 object detection algorithm achieving 80%+ accuracy for real-time person identification</li>
-              <li><strong>Multi-threaded Architecture:</strong> Parallel processing of video streams (60+ FPS), flight control commands, and GUI updates with thread-safe queues</li>
+              <li><strong>AI-Powered Detection:</strong> YOLOv8n object detection achieving 87% accuracy in project testing for real-time person identification</li>
+              <li><strong>Multi-threaded Architecture:</strong> Parallel processing of video streams, flight control commands, and GUI updates with thread-safe queues</li>
               <li><strong>Hardware Integration:</strong> Arduino microcontroller with LED feedback system communicating via PySerial at 9600 baud</li>
               <li><strong>Telegram Alert System:</strong> Automated notifications with timestamped images sent to mobile devices using Telegram Bot API</li>
               <li><strong>Professional GUI:</strong> PyQt5-based interface with glassmorphism design, animated buttons, status indicators, and real-time video display</li>
               <li><strong>Autonomous Navigation:</strong> Customizable patrol patterns (square, front-back) with configurable distance parameters</li>
               <li><strong>Dual Video Sources:</strong> Support for drone camera and IP webcam with seamless switching</li>
-              <li><strong>Real-time Data Processing:</strong> Sub-100ms latency for detection, processing, and hardware response</li>
+              <li><strong>Real-time Data Processing:</strong> Detection latency below 1.5 seconds in testing, with alerts sent to hardware and Telegram</li>
               <li><strong>Battery Management:</strong> Real-time battery monitoring with visual indicators and low-battery warnings</li>
               <li><strong>Emergency Controls:</strong> Fail-safe mechanisms including emergency landing and system shutdown procedures</li>
             </ul>
@@ -787,11 +829,9 @@
 
             <h2>Results & Impact</h2>
             <p>
-              Successfully demonstrated autonomous navigation through complex environments with 80%+ detection 
-              accuracy and 95%+ obstacle avoidance success rate. The project showcased ability to integrate multiple 
-              technologies (AI, embedded systems) into a cohesive, production-ready solution. Demonstrated the real world
-              enginering solution by recieving feedback as proof of triggered alerts and complete system integration. 
-              Received excellent feedback from faculty for system architecture and documentation quality.
+              The integrated system detected people with 87% accuracy and latency below 1.5 seconds in project testing,
+              and triggered LED and Telegram alerts as proof of detection. The project combined AI, multi-threaded
+              software and embedded hardware into one working prototype.
             </p>
           </div>
 
@@ -857,11 +897,8 @@
             <div class="detail-card">
               <h3><i class="fas fa-trophy"></i> Achievements</h3>
               <ul style="list-style: none; padding: 0;">
-                <div class="detail-card">
-              <h3><i class="fas fa-trophy"></i> Achievements</h3>
-              <ul style="list-style: none; padding: 0;">
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>80%+</strong> Detection Accuracy
+                  <strong>87%</strong> Detection Accuracy
                 </li>
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
                   <strong>&lt;1.5 s</strong> Detection Latency
@@ -879,8 +916,6 @@
                   <strong>Integrated</strong> Prototype
                 </li>
               </ul>
-</div>
-              </ul>
             </div>
           </div>
         </div>
@@ -889,22 +924,22 @@
           <h2>Project Gallery</h2>
           <div class="gallery-grid">
             <div class="gallery-item">
-              <img src="images/EmbeddedAlerts.jpeg">
+              <img src="images/EmbeddedAlerts.jpeg" alt="Embedded LED alert hardware">
             </div>
             <div class="gallery-item">
-              <img src="images/Embedded2.png">
+              <img src="images/Embedded2.png" alt="Arduino alert controller wiring">
             </div>
             <div class="gallery-item">
-              <img src="images/embedded3.png">
+              <img src="images/embedded3.png" alt="Embedded alert system test">
             </div>
             <div class="gallery-item">
-              <img src="images/DroneGUI.png">
+              <img src="images/DroneGUI.png" alt="Drone monitoring GUI">
             </div>
             <div class="gallery-item">
-              <img src="images/TelegramBot.png">
+              <img src="images/TelegramBot.png" alt="Telegram alert messages from the drone system">
             </div>
             <div class="gallery-item">
-              <img src="images/DroneSystemDesign.png">
+              <img src="images/DroneSystemDesign.png" alt="Drone system design diagram">
             </div>
           </div>
         </div>
@@ -976,9 +1011,8 @@
 
             <h2>Results & Impact</h2>
             <p>
-              Successfully demonstrated enterprise-level network design with sub-50ms convergence time after link 
-              failures. The automated monitoring system reduced troubleshooting time by 70% through predictive 
-              analytics and proactive alerting. Project received recognition for practical applicability and thorough documentation.
+              Demonstrated a multi-protocol design (multi-area OSPF, IS-IS Level 1/2, eBGP and iBGP) with redundant
+              paths and automatic failover between the core routers.
             </p>
           </div>
 
@@ -1033,13 +1067,10 @@
               <h3><i class="fas fa-trophy"></i> Achievements</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>&lt;50ms</strong> Convergence Time
+                  <strong>3</strong> Routing Protocols (OSPF, IS-IS, BGP)
                 </li>
                 <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>70%</strong> Faster Troubleshooting
-                </li>
-                <li style="padding: 0.7rem 0; border-bottom: 1px solid var(--border-color);">
-                  <strong>99.9%</strong> Network Uptime
+                  <strong>Redundant</strong> Paths with Failover
                 </li>
                 <li style="padding: 0.7rem 0;">
                   <strong>Real-time</strong> Monitoring
@@ -1094,6 +1125,7 @@
         <div class="project-detail-content">
           <div class="detail-main">
             <h2>Project Overview</h2>
+            <p><em>Group project with Melissa Ncube.</em></p>
             <p>
               Designed and tested a security upgrade for a simulated CPUT inter-campus network connecting Bellville and
               District Six. The work addressed inter-campus traffic interception, perimeter-router brute-force attempts and
@@ -1121,15 +1153,25 @@
             <div class="project-gallery">
               <h2>Packet Tracer Evidence</h2>
               <div class="gallery-grid">
-                <div class="gallery-item"><img src="images/projects/cis-ga5/packet-tracer-topology.svg" alt="Bellville and District Six Packet Tracer topology"></div>
-                <div class="gallery-item"><i class="fas fa-lock"></i></div>
-                <div class="gallery-item"><i class="fas fa-shield-halved"></i></div>
-                <div class="gallery-item"><i class="fas fa-network-wired"></i></div>
+                <div class="gallery-item"><a href="images/projects/cis-ga5/topology.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/cis-ga5/topology.jpg" alt="Bellville and District Six topology with ISP and external attacker" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/cis-ga5/tunnel-ping.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/cis-ga5/tunnel-ping.jpg" alt="Bellville user reaches District Six through the IPsec tunnel" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/cis-ga5/qm-idle.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/cis-ga5/qm-idle.jpg" alt="R1 shows QM_IDLE and rising IPsec counters" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/cis-ga5/ssh-refused.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/cis-ga5/ssh-refused.jpg" alt="Unauthorised host refused SSH access" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/cis-ga5/quiet-mode.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/cis-ga5/quiet-mode.jpg" alt="Router enters Quiet-Mode after repeated failed logins" loading="lazy"></a></div>
               </div>
             </div>
           </div>
 
           <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-link"></i> Project Links</h3>
+              <div class="project-actions">
+                <a href="https://github.com/lindokuhlelanga/cis-ipsec-vpn-router-hardening" target="_blank" rel="noopener" class="action-btn">
+                  <i class="fab fa-github"></i> Configs &amp; Evidence
+                </a>
+              </div>
+            </div>
+
             <div class="detail-card">
               <h3><i class="fas fa-tools"></i> Technologies & Concepts</h3>
               <div class="tech-stack-list">
@@ -1163,7 +1205,7 @@
         </div>
 
         <div class="project-detail-image">
-          <img src="images/projects/ngn-ga5/architecture.svg" alt="NGN580S GA5 network and controller architecture">
+          <img src="images/projects/ngn-ga5/architecture.jpg" alt="Controller, BGP and PCEP architecture of the MPLS network">
         </div>
 
         <div class="project-detail-content">
@@ -1190,9 +1232,28 @@
               therefore controller-enforced explicit routes; the report does not claim that OpenDaylight independently computed
               the path from its Traffic Engineering Database.
             </p>
+
+            <div class="project-gallery">
+              <h2>Router and Controller Evidence</h2>
+              <div class="gallery-grid">
+                <div class="gallery-item"><a href="images/projects/ngn-ga5/topology.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-ga5/topology.jpg" alt="GNS3 topology: R1, R2, R3 full mesh and controller network" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/ngn-ga5/pcep-up.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-ga5/pcep-up.jpg" alt="PCEP peer state Up on the router" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/ngn-ga5/update-lsp.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-ga5/update-lsp.jpg" alt="Postman update-lsp request moving the delegated LSP" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/ngn-ga5/iperf3.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-ga5/iperf3.jpg" alt="iperf3 run with zero datagram loss" loading="lazy"></a></div>
+              </div>
+            </div>
           </div>
 
           <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-link"></i> Project Links</h3>
+              <div class="project-actions">
+                <a href="https://github.com/lindokuhlelanga/ngn-pce-mpls-traffic-engineering" target="_blank" rel="noopener" class="action-btn">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+
             <div class="detail-card">
               <h3><i class="fas fa-network-wired"></i> Stack</h3>
               <div class="tech-stack-list">
@@ -1225,7 +1286,7 @@
         </div>
 
         <div class="project-detail-image">
-          <img src="images/projects/ngn-fsa/gui.svg" alt="NGN580S traffic engineering application GUI">
+          <img src="images/projects/ngn-fsa/main-window.jpg" alt="SDN Traffic Engineering Manager main window with LSP inventory and topology">
         </div>
 
         <div class="project-detail-content">
@@ -1260,9 +1321,28 @@
               Message tracing was used to identify the BGPCEP behaviour and a release-specific workaround was recorded,
               rather than treating the controller as a black box.
             </p>
+
+            <div class="project-gallery">
+              <h2>Live Application Evidence</h2>
+              <div class="gallery-grid">
+                <div class="gallery-item"><a href="images/projects/ngn-fsa/architecture.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-fsa/architecture.jpg" alt="Frontend, logic and adapter architecture" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/ngn-fsa/decision.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-fsa/decision.jpg" alt="Congestion detected: transit path rejected, direct path feasible" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/ngn-fsa/after-reroute.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-fsa/after-reroute.jpg" alt="Topology after the LSP re-route" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/ngn-fsa/r1-cli.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/ngn-fsa/r1-cli.jpg" alt="Independent confirmation on R1 command line" loading="lazy"></a></div>
+              </div>
+            </div>
           </div>
 
           <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-link"></i> Project Links</h3>
+              <div class="project-actions">
+                <a href="https://github.com/lindokuhlelanga/sdn-traffic-engineering-manager" target="_blank" rel="noopener" class="action-btn">
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+
             <div class="detail-card">
               <h3><i class="fas fa-code"></i> Technologies</h3>
               <div class="tech-stack-list">
@@ -1273,6 +1353,186 @@
                 <div class="tech-stack-item"><span>OpenDaylight</span></div>
                 <div class="tech-stack-item"><span>PCEP / MPLS-TE</span></div>
                 <div class="tech-stack-item"><span>GNS3 / IOS XRv</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT: Kubernetes Security Framework -->
+    <div id="projectKubernetes" class="page-view">
+      <div class="project-detail">
+        <div class="project-detail-header">
+          <h1>Kubernetes Security Framework</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
+            Automated security posture assessment and policy enforcement for cloud-native environments
+          </p>
+          <div class="project-meta">
+            <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+            <div class="meta-item"><i class="fas fa-shield-halved"></i><span>Cloud-Native Security</span></div>
+            <div class="meta-item"><i class="fas fa-graduation-cap"></i><span>BEngTech Honours Research</span></div>
+          </div>
+        </div>
+
+        <div class="project-detail-image">
+          <img src="images/projects/kubernetes/architecture.jpg" alt="Three-stage framework: CI image scan, admission control and cluster audit">
+        </div>
+
+        <div class="project-detail-content">
+          <div class="detail-main">
+            <h2>The Problem</h2>
+            <p>
+              Kubernetes security can fail in three places: an image can carry known vulnerabilities, a Pod can ask for
+              more privilege than it needs, and the cluster settings can drift from best practice. Each tool sees only one
+              of these, so the evidence ends up scattered. This research joined three open-source tools into one
+              repeatable framework that keeps evidence for every decision.
+            </p>
+
+            <h2>What I Built</h2>
+            <ul>
+              <li><strong>Build stage:</strong> Trivy scans the image in GitHub Actions; the job fails on any HIGH or CRITICAL finding and the publish job only runs after a pass.</li>
+              <li><strong>Admission stage:</strong> OPA Gatekeeper checks every request against 15 policy templates (20 constraints) written in Rego, covering privileges, host access and good practice.</li>
+              <li><strong>Audit stage:</strong> kube-bench checks the cluster against the CIS Benchmark, and a Python script turns its JSON into CSV and HTML reports.</li>
+              <li><strong>Testing:</strong> a PowerShell runner sends 33 test manifests (one unsafe and one safe per policy, plus 3 edge cases) using server-side dry-run.</li>
+            </ul>
+
+            <h2>Results</h2>
+            <ul>
+              <li>nginx failed the CI gate on HIGH and CRITICAL findings; Alpine passed.</li>
+              <li><strong>33/33</strong> expected admission decisions after fixing <strong>3 gaps</strong> the edge cases exposed in my own policies (untagged images, a missing privilege-escalation setting, container-level overrides).</li>
+              <li><strong>131</strong> CIS checks reported: 56 PASS, 14 FAIL, 61 WARN.</li>
+              <li>Gatekeeper decision time measured from its own metrics: <strong>2.72 ms</strong> with 5 constraints and <strong>4.50 ms</strong> with 15 (120 samples, 3 trials).</li>
+              <li>A control pair in the Pod-readiness study showed a 375 ms gap between two setups that were identical inside the cluster, so I reported that the design could not isolate security cost rather than claim a false speed-up.</li>
+            </ul>
+
+            <h2>What I Learned</h2>
+            <p>
+              Building the tool was only half the work. Proving what it does, and stating what the data cannot show,
+              mattered just as much. The research was presented to a CPUT panel in November 2026.
+            </p>
+
+            <div class="project-gallery">
+              <h2>Evidence</h2>
+              <div class="gallery-grid">
+                <div class="gallery-item"><a href="images/projects/kubernetes/denials.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/kubernetes/denials.jpg" alt="Gatekeeper refusing unsafe Pods and naming the rule" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/kubernetes/33-tests.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/kubernetes/33-tests.jpg" alt="Automated test runner: 33 admission cases passing" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/kubernetes/constraints.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/kubernetes/constraints.jpg" alt="Gatekeeper constraints exported from the cluster" loading="lazy"></a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-link"></i> Project Links</h3>
+              <div class="project-actions">
+                <a href="https://github.com/lindokuhlelanga/kubernetes-security-framework" target="_blank" rel="noopener" class="action-btn">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h3><i class="fas fa-code"></i> Technologies</h3>
+              <div class="tech-stack-list">
+                <div class="tech-stack-item"><span>Kubernetes 1.37 (Minikube)</span></div>
+                <div class="tech-stack-item"><span>OPA Gatekeeper / Rego</span></div>
+                <div class="tech-stack-item"><span>Trivy</span></div>
+                <div class="tech-stack-item"><span>GitHub Actions</span></div>
+                <div class="tech-stack-item"><span>kube-bench</span></div>
+                <div class="tech-stack-item"><span>Python</span></div>
+                <div class="tech-stack-item"><span>PowerShell</span></div>
+                <div class="tech-stack-item"><span>Docker</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT: AI Smart Power Management -->
+    <div id="projectSmartPower" class="page-view">
+      <div class="project-detail">
+        <div class="project-detail-header">
+          <h1>AI Smart Power Management &amp; Load Prioritisation</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem;">
+            ESP32, MQTT and a Random Forest model keeping demand under a 500 W limit
+          </p>
+          <div class="project-meta">
+            <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+            <div class="meta-item"><i class="fas fa-microchip"></i><span>Embedded + AI</span></div>
+            <div class="meta-item"><i class="fas fa-users"></i><span>Industrial Design Project (DES370S)</span></div>
+          </div>
+        </div>
+
+        <div class="project-detail-image">
+          <img src="images/projects/smart-power/prototype.jpg" alt="ESP32 smart power prototype with LCD, relay module and status LEDs">
+        </div>
+
+        <div class="project-detail-content">
+          <div class="detail-main">
+            <h2>Project Overview</h2>
+            <p>
+              A low-voltage prototype that predicts household demand and switches loads off in priority order. Python
+              predicts next-step demand with a Random Forest model, a simple rule decides which loads stay on, and MQTT
+              carries the commands to an ESP32 that drives the relays and reports each new state.
+            </p>
+            <p><em>I designed and built the firmware, MQTT network, Python AI and control software, and the hardware
+              integration. The academic project belongs to Sizeka Zingelwa (Electrical Engineering), credited as project owner.</em></p>
+
+            <h2>How It Decides</h2>
+            <ul>
+              <li>At or below 500 W: all loads ON.</li>
+              <li>500 to 600 W: Low-priority load OFF.</li>
+              <li>Above 600 W: Medium and Low OFF, High stays ON.</li>
+              <li>Node-RED shows predicted demand, the limit and load states, but never controls the relays.</li>
+            </ul>
+
+            <h2>Results</h2>
+            <ul>
+              <li><strong>3/3</strong> physical relay scenarios (400, 550, 700 W) gave the expected states; average MQTT acknowledgement <strong>151.30 ms</strong>.</li>
+              <li>Random Forest on a varied simulated profile: MAE 46.20 W, RMSE 55.03 W, R² 0.54.</li>
+              <li>Against a rule-only baseline on the same profile: about <strong>4.9%</strong> less energy and <strong>25%</strong> less time above the limit.</li>
+              <li>An early perfect R² of 1.0 on a repeating pattern was rejected as unrealistic.</li>
+            </ul>
+
+            <h2>Honest Limits</h2>
+            <p>
+              Demand values are simulated; the physical loads are three 5 V fans. The ACS712 current readings were not
+              calibrated to amperes, and the mains voltage sensor was not validated. Savings come from simulation, not a real bill.
+            </p>
+
+            <div class="project-gallery">
+              <h2>Prototype and Results</h2>
+              <div class="gallery-grid">
+                <div class="gallery-item"><a href="images/projects/smart-power/schematic.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/smart-power/schematic.jpg" alt="Low-voltage schematic: ESP32, sensors, relays, LCD and MQTT link" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/smart-power/prototype-700w.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/smart-power/prototype-700w.jpg" alt="At 700 W demand the low-priority loads are switched off" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/smart-power/rf-prediction.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/smart-power/rf-prediction.jpg" alt="Random Forest predicted versus actual demand" loading="lazy"></a></div>
+                <div class="gallery-item"><a href="images/projects/smart-power/baseline-vs-ai.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/smart-power/baseline-vs-ai.jpg" alt="Baseline versus AI-managed demand against the 500 W limit" loading="lazy"></a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-sidebar">
+            <div class="detail-card">
+              <h3><i class="fas fa-link"></i> Project Links</h3>
+              <div class="project-actions">
+                <a href="https://github.com/lindokuhlelanga/ai-smart-power-load-prioritization" target="_blank" rel="noopener" class="action-btn">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h3><i class="fas fa-code"></i> Technologies</h3>
+              <div class="tech-stack-list">
+                <div class="tech-stack-item"><span>ESP32 / Arduino C++</span></div>
+                <div class="tech-stack-item"><span>MQTT (Mosquitto)</span></div>
+                <div class="tech-stack-item"><span>Python</span></div>
+                <div class="tech-stack-item"><span>scikit-learn</span></div>
+                <div class="tech-stack-item"><span>pandas</span></div>
+                <div class="tech-stack-item"><span>Node-RED</span></div>
+                <div class="tech-stack-item"><span>Relays, ACS712, I2C LCD</span></div>
               </div>
             </div>
           </div>
@@ -1726,7 +1986,7 @@
         </div>
 
         <div class="project-detail-image">
-          <img src="images/GEANT2Topology.png" alt="GEANT2 Network Topology">
+          <img src="images/mcf_visualization.png" alt="Multi-commodity flow results on the GEANT2 network">
         </div>
 
         <div class="project-detail-content">
@@ -1908,23 +2168,6 @@
           </div>
         </div>
 
-        <div class="project-gallery">
-          <h2>Network Visualizations & Results</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <img src="images/ShortestPath.png" alt="Shortest Path Visualization">
-            </div>
-            <div class="gallery-item">
-              <img src="images/LinkUtilization.png" alt="Link Utilization Graph">
-            </div>
-            <div class="gallery-item">
-              <img src="images/StatisticalAnalysis.png" alt="Statistical Analysis">
-            </div>
-            <div class="gallery-item">
-              <img src="images/FlowDistribution.png" alt="Flow Distribution">
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -2077,7 +2320,9 @@
       'game': 'projectGame',
       'embedded': 'projectEmbedded',
       'power-systems': 'projectPowerSystems',
-      'network-optimization': 'projectNetworkOptimization'
+      'network-optimization': 'projectNetworkOptimization',
+      'kubernetes': 'projectKubernetes',
+      'smart-power': 'projectSmartPower'
     };
 
     function viewProject(projectId) {

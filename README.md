@@ -15,17 +15,20 @@ The site presents selected work across:
 
 ## Featured work
 
-- Kubernetes Security Framework — Honours research
-- Computer & Internetwork Security GA5 — inter-campus VPN, router hardening and attack testing
-- NGN580S GA5 — OpenDaylight/PCEP controller-driven MPLS traffic engineering
-- NGN580S Final Summative — Python traffic-engineering and network automation application
-- Autonomous Drone Navigation & AI Monitoring
-- Network Traffic Engineering & Optimisation
-- Software-Defined Networking
-- IEEE Six-Bus Power System Analysis & Protection Study
-- WebGL Flappy Bird
-- Embedded Energy-Aware Controller
-- FM Transmitter & Receiver
+| Project | Code and evidence |
+|---|---|
+| Kubernetes Security Framework (Honours research) | [kubernetes-security-framework](https://github.com/lindokuhlelanga/kubernetes-security-framework) |
+| AI Smart Power Management & Load Prioritisation (ESP32, MQTT, Random Forest) | [ai-smart-power-load-prioritization](https://github.com/lindokuhlelanga/ai-smart-power-load-prioritization) |
+| CPUT inter-campus IPsec VPN and router hardening (CIS580S GA5, with Melissa Ncube) | [cis-ipsec-vpn-router-hardening](https://github.com/lindokuhlelanga/cis-ipsec-vpn-router-hardening) |
+| Controller-driven MPLS traffic engineering with OpenDaylight (NGN580S GA5) | [ngn-pce-mpls-traffic-engineering](https://github.com/lindokuhlelanga/ngn-pce-mpls-traffic-engineering) |
+| SDN Traffic Engineering Manager, Python app (NGN580S Final Summative) | [sdn-traffic-engineering-manager](https://github.com/lindokuhlelanga/sdn-traffic-engineering-manager) |
+| Autonomous Drone Navigation & AI Monitoring | [Autonomous-Drone-Navigation](https://github.com/lindokuhlelanga/Autonomous-Drone-Navigation) |
+| Network Traffic Engineering & Optimisation | |
+| Software-Defined Networking | |
+| IEEE Six-Bus Power System Analysis & Protection Study | |
+| WebGL Flappy Bird | |
+| Embedded Energy-Aware Washing Machine Controller | |
+| FM Transmitter & Receiver | |
 
 ## Site structure
 

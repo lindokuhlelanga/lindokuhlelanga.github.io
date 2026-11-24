@@ -2006,3 +2006,16 @@
       transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
   
+
+/* Mobile: keep long contact details and background particles inside the screen */
+@media (max-width: 480px) {
+  .contact-item { padding: 1rem 1.2rem; max-width: 100%; min-width: 0; }
+  .contact-item a, .contact-item span { overflow-wrap: anywhere; }
+}
+.particles-bg { overflow: hidden; }
+html, body { overflow-x: clip; }
+
+/* Real screenshots and diagrams: show the whole image instead of cropping it */
+.project-detail-image img[src*="images/projects/"] { object-fit: contain; background: #fff; }
+.gallery-item a { display: block; width: 100%; height: 100%; }
+.gallery-item a img { cursor: zoom-in; }
