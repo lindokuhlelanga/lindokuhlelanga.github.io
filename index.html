@@ -223,7 +223,8 @@
           <!-- Project: AI Smart Power Management -->
           <div class="project" data-category="embedded ai electrical" data-project="smart-power">
             <div class="project-image">
-              <img src="images/projects/smart-power/prototype.jpg" alt="ESP32 smart power prototype with LCD, relays and status LEDs" loading="lazy">
+              <img src="images/projects/smart-power/prototype.jpg" alt="Original smart power prototype" loading="lazy" data-smart-power-reconstruction>
+              <span data-smart-power-reconstruction-label style="display:none;position:absolute;bottom:8px;left:8px;background:#17192b;color:white;padding:4px 8px;border-radius:4px;font-size:0.75rem;">AI-assisted reconstruction</span>
               <span class="project-category">Embedded / AI</span>
             </div>
             <div class="project-content">
@@ -1466,8 +1467,9 @@
         </div>
 
         <div class="project-detail-image">
-          <img src="images/projects/smart-power/prototype.jpg" alt="ESP32 smart power prototype with LCD, relay module and status LEDs">
+          <img src="images/projects/smart-power/prototype.jpg" alt="Original smart power prototype" data-smart-power-reconstruction>
         </div>
+        <p data-smart-power-reconstruction-label style="display:none;margin:0.75rem 0 1.5rem;color:var(--text-secondary);font-size:0.9rem;">AI-assisted reconstruction from the prototype photographs and videos. For presentation only; original evidence is shown below.</p>
 
         <div class="project-detail-content">
           <div class="detail-main">
@@ -1503,7 +1505,15 @@
             </p>
 
             <div class="project-gallery">
-              <h2>Prototype and Results</h2>
+              <h2>Original Prototype Photographs</h2>
+              <div class="gallery-grid" id="smartPowerOriginals">
+                <div class="gallery-item"><a href="images/projects/smart-power/prototype.jpg" target="_blank" rel="noopener"><img src="images/projects/smart-power/prototype.jpg" alt="Original prototype photograph" loading="lazy"></a></div>
+              </div>
+              <div id="smartPowerVideos" style="display:none;margin-top:1.5rem;">
+                <h2>Original Demonstration Videos</h2>
+                <div id="smartPowerVideoList"></div>
+              </div>
+              <h2 style="margin-top:1.5rem;">Prototype and Results</h2>
               <div class="gallery-grid">
                 <div class="gallery-item"><a href="images/projects/smart-power/schematic.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/smart-power/schematic.jpg" alt="Low-voltage schematic: ESP32, sensors, relays, LCD and MQTT link" loading="lazy"></a></div>
                 <div class="gallery-item"><a href="images/projects/smart-power/prototype-700w.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/projects/smart-power/prototype-700w.jpg" alt="At 700 W demand the low-priority loads are switched off" loading="lazy"></a></div>
@@ -2603,6 +2613,68 @@
     console.log('%c💼 Available for Graduate Programs & Opportunities', 'color: #10b981; font-size: 14px; font-weight: bold;');
   </script>
 
+<script>
+(function () {
+  const base = 'images/projects/smart-power/';
+  const reconstruction = new Image();
+  reconstruction.onload = function () {
+    document.querySelectorAll('[data-smart-power-reconstruction]').forEach(function (img) {
+      img.src = reconstruction.src;
+      img.alt = 'AI-assisted visual reconstruction of the smart power prototype';
+    });
+    document.querySelectorAll('[data-smart-power-reconstruction-label]').forEach(function (label) {
+      label.style.display = 'block';
+    });
+  };
+  reconstruction.src = base + 'prototype-reconstruction.jpg';
+
+  const gallery = document.getElementById('smartPowerOriginals');
+  const photos = Array.from({length:6}, function (_, i) {
+    return new Promise(function (resolve) {
+      const name = 'original-' + String(i + 1).padStart(2,'0') + '.jpg';
+      const photo = new Image();
+      photo.onload = function () { resolve({name:name, index:i+1}); };
+      photo.onerror = function () { resolve(null); };
+      photo.src = base + name;
+    });
+  });
+  Promise.all(photos).then(function (items) {
+    items.filter(Boolean).forEach(function (item) {
+      const cell = document.createElement('div');
+      cell.className = 'gallery-item';
+      const link = document.createElement('a');
+      link.href = base + item.name;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      const img = document.createElement('img');
+      img.src = link.href;
+      img.alt = 'Original smart power prototype photograph ' + item.index;
+      img.loading = 'lazy';
+      link.appendChild(img);
+      cell.appendChild(link);
+      gallery.appendChild(cell);
+    });
+  });
+  const videos = ['demo-01.mp4','demo-02.mp4'];
+  Promise.all(videos.map(function (name) {
+    return fetch(base + name, {method:'HEAD'}).then(function (r) {
+      return r.ok && (r.headers.get('Content-Type') || '').includes('video/') ? name : null;
+    }).catch(function () { return null; });
+  })).then(function (items) {
+    const list = document.getElementById('smartPowerVideoList');
+    items.filter(Boolean).forEach(function (name) {
+      const video = document.createElement('video');
+      video.controls = true;
+      video.preload = 'metadata';
+      video.playsInline = true;
+      video.src = base + name;
+      video.style.cssText = 'width:100%;max-height:560px;object-fit:contain;background:#111;border-radius:12px;margin-bottom:1rem;';
+      list.appendChild(video);
+    });
+    if (list.children.length) document.getElementById('smartPowerVideos').style.display = 'block';
+  });
+})();
+</script>
 </body>
 </html>
 
